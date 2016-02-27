@@ -1,0 +1,53 @@
+%This 'main' document will serve as the root document to draw the whole document together.
+%Compile this document in order to 
+%Comments:
+%--in order to specify the relative file path to the introduction document, need \subimport{}{}.
+\documentclass{jthesis}
+\usepackage{import}
+\graphicspath{ {../images/} }
+
+\title{Simulation of Diffusion in Heterogeneous Media}
+\date{March 20, 2016}
+\author{Paul Ionele}
+
+\begin{document}
+
+\pagenumbering{roman} 
+\maketitle
+
+\makeabstract{
+This is a short example of an abstract.
+}
+
+\makeacknowledgements{
+Thank some people that you like here.
+}
+
+\makedeclaration
+
+\maketableofcontents
+
+\pagenumbering{arabic}
+\doublespacing
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%Include the different document sections in the space below!
+\subimport{../chapters/}{introduction}
+\subimport{../chapters/}{methods}
+\subimport{../chapters/}{discussion}
+\subimport{../chapters/}{conclusion}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{thebibliography}{}
+
+\bibitem[Navarro, Frenk, \& White(1995)]{nfw95} Navarro, J.F., Frenk, C.S., \& White, S.D.M.  1995, MNRAS, 275, 720
+
+\end{thebibliography}
+
+\appendix
+
+\chapter{Appendix}
+\label{app:sample}
+This is just an example of an appendix.
+
+\end{document}
