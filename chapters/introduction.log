@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  28 FEB 2016 20:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  28 FEB 2016 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1898,7 +1898,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 25--31
  []
 
 
-Overfull \hbox (651.0007pt too wide) in paragraph at lines 25--31
+Overfull \hbox (782.17598pt too wide) in paragraph at lines 25--31
 []\OML/cmm/m/it/10 :png[][]$ 
  []
 
