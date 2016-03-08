@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  7 MAR 2016 20:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  8 MAR 2016 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -26,12 +26,20 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks16
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -87,7 +95,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen110
 \Gm@layouthoffset=\dimen111
 \Gm@layoutvoffset=\dimen112
-\Gm@dimlist=\toks15
+\Gm@dimlist=\toks17
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -211,7 +219,7 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
+\@emptytoks=\toks18
 \ex@=\dimen117
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -241,21 +249,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count110
 \dspbrk@lvl=\count111
-\tag@help=\toks17
+\tag@help=\toks19
 \row@=\count112
 \column@=\count113
 \maxfields@=\count114
-\andhelp@=\toks18
+\andhelp@=\toks20
 \eqnshift@=\dimen120
 \alignsep@=\dimen121
 \tagshift@=\dimen122
 \tagwidth@=\dimen123
 \totwidth@=\dimen124
 \lineht@=\dimen125
-\@envbody=\toks19
+\@envbody=\toks21
 \multlinegap=\skip47
 \multlinetaggap=\skip48
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -451,7 +459,7 @@ Package: siunitx 2013/07/31 v2.5s A comprehensive (SI) units package
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen157
 \extrarowheight=\dimen158
-\NC@list=\toks21
+\NC@list=\toks23
 \extratabsurround=\skip64
 \backup@length=\skip65
 )
@@ -683,12 +691,12 @@ LaTeX Font Info:    ... okay on input line 13.
 \scratchbox=\box50
 \nofMPsegments=\count164
 \nofMParguments=\count165
-\everyMPshowfont=\toks22
+\everyMPshowfont=\toks24
 \MPscratchCnt=\count166
 \MPscratchDim=\dimen179
 \MPnumerator=\count167
 \makeMPintoPDFobject=\count168
-\everyMPtoPDFconversion=\toks23
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -866,7 +874,7 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<../images/cellpic_2.png, id=165, 1295.59032pt x 645.16031pt>
+<../images/cellpic_2.png, id=175, 1295.59032pt x 645.16031pt>
 File: ../images/cellpic_2.png Graphic file (type png)
 
 <use ../images/cellpic_2.png>
@@ -883,19 +891,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 2.
 [4
 
-] <../images/2d_unit_cell_1.png, id=189, 404.2302pt x 404.2302pt>
+] <../images/2d_unit_cell_1.png, id=200, 404.2302pt x 404.2302pt>
 File: ../images/2d_unit_cell_1.png Graphic file (type png)
 
 <use ../images/2d_unit_cell_1.png>
-Package pdftex.def Info: ../images/2d_unit_cell_1.png used on input line 33.
+Package pdftex.def Info: ../images/2d_unit_cell_1.png used on input line 11.
 (pdftex.def)             Requested size: 216.81pt x 216.81305pt.
+ [5 <../images/2d_unit_cell_1.png>]
+<../images/1d_unit_cell_2.png, id=206, 399.4122pt x 29.8716pt>
+File: ../images/1d_unit_cell_2.png Graphic file (type png)
+
+<use ../images/1d_unit_cell_2.png>
+Package pdftex.def Info: ../images/1d_unit_cell_2.png used on input line 41.
+(pdftex.def)             Requested size: 433.62001pt x 32.42992pt.
+
+<../images/2d_unit_cell_2.png, id=207, 608.9952pt x 180.1932pt>
+File: ../images/2d_unit_cell_2.png Graphic file (type png)
+
+<use ../images/2d_unit_cell_2.png>
+Package pdftex.def Info: ../images/2d_unit_cell_2.png used on input line 50.
+(pdftex.def)             Requested size: 433.62001pt x 128.30649pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (../chapters/discussion.tex [5] [6 <../images/2d_unit_cell_1.png>]
+) (../chapters/discussion.tex [6 <../images/1d_unit_cell_2.png>] [7 <../images/
+2d_unit_cell_2.png>]
 Chapter 3.
-) (../chapters/conclusion.tex [7
+) (../chapters/conclusion.tex [8
 
 ]
 Chapter 4.
@@ -904,12 +927,12 @@ Overfull \hbox (3.47269pt too wide) in paragraph at lines 1--1
  \OT1/cmr/bx/n/20.74 4. FU-TURE WORK AND CON-CLU-SION
  []
 
-) [8
+) [9
 
-] [9]
+] [10]
 Appendix A.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
-[10
+[11
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
@@ -917,17 +940,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 11D30109F0C7C0341A7A5723A16DEB8E;1232.
+(rerunfilecheck)             Checksum: DC45A6B9EBBB84065ADE621E8CFC2A98;1232.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 16016 strings out of 493304
- 308888 string characters out of 6139871
- 351974 words of memory out of 5000000
- 19203 multiletter control sequences out of 15000+600000
+ 16064 strings out of 493304
+ 309899 string characters out of 6139871
+ 353712 words of memory out of 5000000
+ 19240 multiletter control sequences out of 15000+600000
  13111 words of font info for 49 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,10n,45p,10440b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,45p,10440b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
@@ -935,10 +958,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
 m1200.pfb>
-Output written on main.pdf (17 pages, 297902 bytes).
+Output written on main.pdf (18 pages, 324426 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

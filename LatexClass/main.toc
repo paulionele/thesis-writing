@@ -11,11 +11,11 @@
 \contentsline {section}{\numberline {1.4}Simple Cells and Tissues}{2}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Tissues}{3}{subsection.1.4.1}
 \contentsline {chapter}{\numberline {2}Models and Simulations}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}1-Dimensional Systems}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Homogenous System}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Heterogeneous System}{5}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}2-Dimensional System}{5}{section.2.2}
-\contentsline {chapter}{\numberline {3}Results and Analysis}{7}{chapter.3}
-\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{8}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{9}{section*.12}
-\contentsline {chapter}{\numberline {A}Appendix}{10}{appendix.A}
+\contentsline {section}{\numberline {2.1}1-Dimensional Systems}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Homogenous System}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Heterogeneous System}{6}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}2-Dimensional System}{7}{section.2.2}
+\contentsline {chapter}{\numberline {3}Results and Analysis}{8}{chapter.3}
+\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{9}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{10}{section*.14}
+\contentsline {chapter}{\numberline {A}Appendix}{11}{appendix.A}

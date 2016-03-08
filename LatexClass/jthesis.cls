@@ -8,6 +8,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+\RequirePackage{amsfonts}
 \RequirePackage{setspace}
 \RequirePackage{FancyHdr}
 \RequirePackage{siunitx}
