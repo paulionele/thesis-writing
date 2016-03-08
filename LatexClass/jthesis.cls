@@ -25,7 +25,7 @@
 
 \renewcommand{\maketitle}
 {
-\newgeometry{top=1in, bottom=1in, left=2.5in, right=2in}
+\newgeometry{top=1in, bottom=1in, left=2in, right=2in}
 \begin{titlepage}
 \begin{center}
 {
