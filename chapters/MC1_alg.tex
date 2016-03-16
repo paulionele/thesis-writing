@@ -1,0 +1,72 @@
+	\begin{algorithm}[h]
+		%\KwData{this text}
+		\label{alg:1D-MC}
+		\caption{1D Monte Carlo}
+		(\textsl{initialization of all necessary variables and array structures})\;
+		\For(\tcc*[h]{for every time-step...}){$ t = 1, 2, 3, \cdots, t_{\textrm{max}} $}{
+			\For(\tcc*[h]{loop over every particle...}){$ n = 1, 2, 3, \cdots, N$}{
+				determine which unit cell the particle is in\;
+				determine where in the unit cell the particle is located\;	  	
+				\eIf{particle is in cellular region}{
+					assign particle state: cellular\;
+				}
+				{
+					assign particle state: extracellular\;
+				}
+				\BlankLine
+				\tcc{Determine possible particle movement using a test position. The particle's position does not change.}
+				\eIf{particle state: cellular}{
+					\tcc{Cellular directional stepping probabilities used.}
+					draw pseudo-random number ($ rnd $) from uniform distribution\;
+					\uIf{$ \textrm{rnd} < P_{x,i} $}{
+						generate particle test position if to move one unit $ -x $\;
+					}
+					\uElseIf{$  \textrm{rnd} < P_{x,i} + P_{x,i} $}{
+						generate particle test position if to move one unit $ +x $\;
+					}
+					\Else{
+						generate particle test position if to stay in current position\;
+					}
+				}
+				{
+					\tcc{Extracellular stepping probabilities used.}
+					draw pseudo-random number ($ rnd $) from uniform distribution\;
+					\uIf{$ \textrm{rnd} < P_{x,e} $}{
+						generate particle test position if to move one unit $ -x $\;
+					}
+					\uElseIf{$  \textrm{rnd} < P_{x,e} + P_{x,e} $}{
+						generate particle test position if to move one unit $ +x $\;
+					}
+					\Else{
+						generate particle test position if to stay in current position\;
+					}	
+				}
+				\pagebreak
+				\BlankLine
+				\tcc{Particle movement depends on the test position.}
+				determine which unit cell the test position is in\;
+				determine where in the unit cell test position is located\;
+				\eIf{particle test position is in cellular region}{
+					assign particle test state: cellular\;			
+				}
+				{
+					assign particle test state: extracellular\;
+				}
+				\BlankLine
+				\uIf{state == teststate}{
+					\tcc{Particle has not moved to different region.}
+					set new particle position to test position\;
+				}
+				\uElseIf{state == cellular \& teststate == extracellular}{
+					\tcc{Particle is in cellular region at boundary.}
+					draw pseudo-random number ($ rnd $) from uniform distribution\;
+					tbd\;
+				}
+				\Else{
+					tbd\;
+				}
+			}
+		}
+		\KwResult{Particle density distribution at every time step.}
+			 
+	\end{algorithm}

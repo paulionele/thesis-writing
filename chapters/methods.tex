@@ -1,54 +1,132 @@
 \chapter{Models and Simulations}
+	\label{sec:mods-sims}
+	%Most of the general details are presented before the first section.
+	
+	%Broad/non-focused introduction to section.
+	A simulation is intended to imitate in many cases, a real-world process or system that may be too difficult or costly to analyze directly. Before any such simulation can begin, a model of the system studied must be constructed. Models capture the characteristics and behaviours of the system they represent and in general, a model should be as simple as possible (since resources are limited) while still explaining experimental observations and making predictions with a given degree of accuracy. The simulation is the implementation of the model and can be executed on a computer to produce data for testing, analysis, and visual presentation.
 
-A simulation is intended to imitate in many cases, a real-world process or system, that may be too difficult or costly to analyze directly. Before any such simulation can begin, a model of the system studied must be constructed. Models capture the characteristics and behaviours of the system they represent and in general, a model should be as simple as possible (since resources are limited) while still explaining experimental observations and making predictions with a given degree of accuracy. The simulation is the implementation of the model and can be executed on a computer to produce data for testing, analysis, and visual presentation.
+	%The simplified model for simulation and its relation to organized cells in simple tissues.
+	In our simplified model of a biological tissue, the relatively ordered and periodic nature of cells in most simple tissues is captured as a series of repeating \textsl{unit cells}. These unit cells are the building blocks of the heterogeneous 1D and 2D models. Each unit cell is characterized by a cellular domain, separated from an extracellular domain by a semi-permeable membrane. The domains are isotropic except at the boundaries where a change in diffusivity and semi-permeable boundary exist. Within each domain, the only characteristic modelled is the diffusivity of ideal particles, and is implemented as a directional stepping probability (Section \ref{sec:intro-diffusion}). For all of the models, the cellular domains had smaller diffusivities (diffusion coefficients) than the extracellular domains, similar to some real tissues. Regarding the boundaries, there exists two kinds in our models. The first kind is a totally-reflecting boundary; it forms the absolute boundary of the model system and represents an insurmountable physical boundary. The second kind is a semi-permeable non-active/passive boundary and represents the selectively permeable nature of the plasma membrane. In a real biological plasma membrane, the integral membrane-bound proteins can facilitate either active or passive transport. In the simple cell model developed, the semi-permeable membranes behave in a passive transport manner and this is implemented as a boundary transition probability, a concept explained in Section \ref{sec:intro-diffusion}.
+	
+	%What exactly is being simulated and quick overview of how the particles move qualitatively.
+	The simulations executed and subsequently analyzed were that of particle diffusion. More specifically, the diffusion of idealized, non-interacting particles experiencing zero net force, and adhering to boundary constraints. Particle motion was therefore undirected but occurred in only one direction (along a line) in the 1D system, and in two orthogonal directions in the 2D system. For each time step, each particle was allowed to move in only one direction or stay in its current location and since particles were non-interacting, multiple occupancy of lattice sites was permitted.
+	
+	%Figure to show the unit cell and break up long chunk of text.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{2d_unit_cell_1.png}
+		\caption{A single 2D unit cell forms the building block of the 2D model. An example lattice arrangement is overlayed on the model to show possible particle positions. The dimensions of each domain can be adjusted individually by changing the number of lattice points used to define each dimension. Dashed lines represent semi-permeable boundaries and lattice points outside the cell belong to adjacent cells.}
+		\label{fig:2d_unit_cell_1.png}
+	\end{figure}
 
-In our simplified model of a biological tissue, the relatively ordered and periodic nature of cells in most simple tissues is captured as a series of repeating \textit{unit cells}. These unit cells are the building blocks of the heterogeneous 1D and 2D models. Each unit cell is characterized by a cellular domain, separated from an extracellular domain by a semi-permeable membrane. The domains are isotropic except at the boundaries where a change in viscosity and semi-permeable barrier exist. Within each domain, the only characteristic modelled is viscosity, and is implemented as a directional stepping probability (Section \ref{sec:intro-diffusion}). Regarding the boundaries, there exists two kinds in our models. The first kind is a totally-reflecting boundary; it forms the absolute boundary of the model system and represents an insurmountable physical barrier. The second kind is a semi-permeable non-active/passive boundary and represents the selectively permeable nature of the plasma membrane. In a real biological plasma membrane, the integral membrane proteins can facilitate either active or passive transport. In the simple cell model developed, the semi-permeable membranes behave in a passive transport manner and this is implemented as a boundary transition probability, a concept explained in Section \ref{sec:intro-diffusion}.
+	%Fixed step-sizes lead to lattice-like arrangement of particle positions. 
+	It was decided from the start of the project that particles would move in the system by a constant jump/step-size, compared to a continuum step-size (ex. Gaussian). Although this particle behaviour is generally less representative of a real diffusion process and less accurate compared to continuum Monte Carlo (MC) methods and molecular dynamics simulations, the data generated would still be sufficiently accurate for our analytical purposes and be faster to compute. Fixed step-sizes in the particle movement results in a grid or lattice-like arrangement of particle positions over time. The process simulated is therefore said to be occur on a lattice as the particles are free to move, but only to fixed lattice positions. This manner of particle movement was implemented in both the MC and master equation (ME) simulations.
 
-The diffusion of idealized particles, which are non-interacting, experience no net force, and boundary constraints . Particle motion is therefore undirected but occurs in only 1 direction (along a line) in the 1D system, and in 2 orthogonal directions in the 2D system. It was decided from the start that a fixed particle jump/step-size, compared to a Gaussian step-size, would yield data sufficiently accurate for our analytical purposes.
+	%Wrap up, cover remaining details, and state general goals of the simulations. 
+	Overall, the goals were to simulate the process of diffusion for homogenous and heterogeneous systems using MC and ME methods, calculate a mean-square-displacement (MSD) for every time step from the computed density distribution, and from the MSD, determine an effective diffusivity for the system. For both the MC and ME simulations, the particle density distribution data output was of the same form. MSD calculation implementations varied slightly between the MC and ME simulations, but the calculations for effective diffusivity were the same. 
+	
+	
+	
+	
+%	The effective diffusivity of the system is obtained in long-time limit using the Einstein-Smoluchowsky relation (kinetic theory):
+%	
+%	\begin{equation}
+%		D = \frac{\langle R^2 \rangle}{d\cdot t}
+%	\end{equation}
+%	
+%	where $ d $ is the dimensionality of the system; 1 for 1D systems and 2 for 2D systems.
+%	
+%	The mean displacement $ \langle R(t) \rangle $ of an increasing number of particles in the absence of external forces, approaches zero. The mean \textsl{square} displacement does not.
+	
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{2d_unit_cell_1.png}
-	\caption{A single 2D unit cell forms the building block of the 2D model. An example lattice arrangement is overlayed on the model to show possible particle positions. The dimensions of each domain can be adjusted individually by increasing or decreasing the number of lattice points used in the simulation. Dashed lines represent semi-permeable boundaries and lattice points outside the cell belong to adjacent cells.}
-	\label{fig:2d_unit_cell_1.png}
-\end{figure}
+%Further arrangement possibilities; do we sort the simulations by MC and ME sections with subsections on 1D and 2D systems with further subsubsections on homogenous and heterogenous systems? Even if we sort by 1D and 2D sections with homogenous and heterogenous subsections we still need to divide MC and ME into subsubsections. Too much nesting, I want to go no deeper than 2 nest levels and I don't want to have too much information in a single section and have a few lines in a subsection, it doesn't look good.
 
-Particle diffusion in both the 1D and 2D systems were simulated using Monte Carlo and master equation approaches. 
+\section{Monte Carlo Simulations}
+%General structure notes: should not really cover the theory of Monte Carlo, rather the implementation and related details. Introduction applicable to all systems, why Monte Carlo, general pseudo-code example.
 
-Using Monte Carlo, information on the individual state (i.e. current position and path history) can be maintained. However, due to the finite number of particles used in the simulation and the stochastic nature of individual particle motion, statistical fluctuations lead discontinuous (?) distributions.
+	Using MC-based algorithms, information on the individual state of each particle including current position and path history, can be maintained. However, due to the finite number of particles used in the simulation and the stochastic nature of individual particle motion, statistical fluctuations lead to `non-smooth' density distributions. The use of MC algorithms in simulating the process of diffusion was motivated by the random nature of the diffusion process (Section \ref{sec:intro-diffusion}) at the level of the individual particle.
+	
+	Consider a particle at some position $ r_i $ on a lattice. In a real unrestricted diffusion process, the particle can move in any direction with any step-size. 
+	
+	MC methods require the generation of random numbers; these were generated during the execution of the simulation using the \texttt{rand()} C-library function and \texttt{RAND\textunderscore MAX} built-in constant. It was desired that the random numbers $ r_i $ be uniformly distributed over the interval $ 0 \leq r_i < 1 $, so all random numbers returned by the \texttt{rand()} call were normalized by \texttt{RAND\textunderscore MAX}.
+	
+%	\begin{algorithm}[t]
+%	  \caption{Simple Monte Carlo Algorithm}\label{smc}
+%	  \begin{algorithmic}[1]
+%	    %\Procedure{Monte Carlo}{$N,t_{\textrm{max}}$}\Comment{Necessary variables initialized.}
+%	    
+%	    \For{$i = 1,2,3,\cdots, N$}\Comment{Loop over all particles.}
+%	    	\State $ rnd\gets \texttt{rand()} $ \Comment{Random number $ \in [0,1] $.}
+%	    	\If{$ rnd < P_- $}
+%	    	
+%	    	
+%	    \EndFor
+%	    \State \textbf{return} $b$\Comment{The gcd is b}
+%	    \EndProcedure
+%	  \end{algorithmic}
+%	\end{algorithm}
 
-Using the master equation methods and evolving the particle density distribution in time, discontinuations (?) in the distributions are no longer an issue, however at the expense of no information on individual particle state.
+\subsection{1D Homogenous and Heterogeneous Systems}
+	A natural starting point for the project was 1D systems since they are more simple to model and simulate than those which are multidimensional. In our 1D simulations, particles move along a line and at any given lattice site, can move to either one of the two neighbour sites, unless an absolute boundary is met. A particle step-size of one lattice unit ($ a = 1 $) was used, meaning that the particle steps only a single lattice site in a randomly selected direction, each time step. This stepping distance is currently uncorrelated/uncalibrated with any physical or real distance. Each time step in the simulation is also uncorrelated with any characteristic or real time; in the simulation it is simply an integer used as a loop variable. Length and time-scale correlation with physical systems is possible but such an endeavour is outside the time limits of the current project.
+	
+	In the homogenous system (Figure \ref{fig:1d_unit_cell_1.png}) where particle motion is unbiased, a particle that is not at the absolute lattice limits has an equal probability to step one lattice unit in either direction, we'll use $ x $. Let those probabilities be: $ P_x^+ $ and $ P_x^- $. We can introduce another physically sensible probability; the probability that a particle does not move. Let this probability that a particle stays at its current lattice site for the next time step be: $ P_x^s = 1 - P_x^+ - P_x^- $. If not at an absolute boundary, the particle has three possible future states. At the absolute boundaries, the particle has only two possible future states; it may move from its current lattice site in a direction away from the boundary, or it may stay at its current lattice site. For example, with reference to Figure \ref{fig:1d_unit_cell_1.png}, if the particle is at the leftmost boundary, then it can only move to the right neighbour lattice site or stay at its current lattice site. Therefore the probabilities for the particle's motion depend on its position within the system and for this example they are: $ 0 < P_x^+ \leq 1 $ and $ P_x^s = 1 - P_x^+ $. It should be noted that reflecting boundaries in the simulation model a situation where a particle attempts to move through the boundary, but is `reflected' back to its starting position. Therefore in the simulations, the probability of moving towards the boundary is not zero, it is the probability of crossing the boundary that is zero. Since the events of moving towards the boundary and crossing the boundary are treated as mutually exclusive, the total probability of a particle transition into a different domain is the product of the two individual probabilities. In the simulations, the position of the particle within the system is determined and $ P_x^s $ and $ P_x^{-,+} $ are automatically appropriately set. At this point, it may be interesting to ask ``What if the transition probability is not zero at the absolute boundaries?". If the computer simulation does not break from accessing memory space outside a predefined array, then one obtains the case for a semi-permeable boundary and this will be detailed later on.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\linewidth]{1d_unit_cell_1.png}
+		\caption{Homogenous 1D cell model with lattice overlay. The sold lines represent the absolute physical limits of the system and behave as reflecting boundaries.}
+		\label{fig:1d_unit_cell_1.png}
+	\end{figure}	
+	
+	In the heterogeneous system (Figure \ref{fig:1d_unit_cell_2.png}), a particle that is not at the absolute lattice limits and is not at a lattice site next to a permeable boundary, has an equal probability to step one lattice unit in either direction, same as in the homogenous system simulation. Particle behaviour at the absolute boundaries was handled the same way as in the homogenous system. The different diffusivities of the cellular and extracellular regions were simulated by using different stepping probabilities. We introduce the subscripts $ i $ and $ e $ to differentiate between stepping probabilities in the (\textsl{intra})cellular and extracellular domains: $ P_{x,i}^{+,-} $ and $ P_{x,e}^{+,-} $. Within each domain and excluding the lattice points at the boundaries, the behaviour of the particles was like that of the homogenous system. At the semipermeable boundaries, the following condition was necessary if the long-time density distribution was to be physically reasonable:
+	
+	\begin{equation}
+		\label{eq:isothermal}
+		P_{\textrm{e}\rightarrow \textrm{i}} = \left( \dfrac{P_{x,\textrm{i}}}{P_{x,\textrm{e}}}\right)  P_{\textrm{i}\rightarrow e}
+	\end{equation}
+	
+	This equation relates the boundary transition probabilities $ P_{e \rightarrow i} $ (extracellular to cellular transition) and $ P_{i \rightarrow e} $ (cellular to extracellular transition) between regions of different diffusivities, characterized by the directional stepping probabilities $ P_{x,i} $ and $ P_{x,e} $, under the condition that $ P_{x,i} < P_{x,e} $ (Section \ref{sec:intro-diffusion}). Note that $ P_{e \rightarrow i} $ \textsl{or} $ P_{i \rightarrow e} $ may be set arbitrarily, but one determines the other according to Equation \ref{eq:isothermal}; they cannot be set independently if the correct density distribution in the long time is desired. 
+	
+	As an example, consider a particle at a lattice site adjacent to semi-permeable boundary. If the particle is in a cellular region, the total transition probability for the particle to the extracellular region is the product of the transition probability from the cellular to extracellular region and the \textsl{cellular} directional stepping probability.
+	
+	\begin{equation}
+		P_{\textrm{total},\, \textrm{i} \rightarrow \textrm{e}} = \left( \dfrac{P_{x,\textrm{e}}}{P_{x,\textrm{i}}}\right)  P_{\textrm{e}\rightarrow i} \cdot P_{x,i}
+	\end{equation}
+	
+	Using Equation \ref{eq:isothermal} for the transition probabilities, the total transition probability across any semi-permeable boundary can be determined. In the case of absolute reflecting boundaries, the transition probabilities in Equation \ref{eq:isothermal} are zero, and hence the total transition probability is zero.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\linewidth]{1d_unit_cell_2.png}
+		\caption{Heterogeneous 2D unit cells with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary, separating regions characterized by different diffusivities.}
+		\label{fig:1d_unit_cell_2.png}
+	\end{figure}
+	
+	\newpage
+	Our MC based simulation of diffusion requires a random number generator (pseudo-random uniform distribution) and a way to keep track of particle positions.
 
-For both simulation types, the computed density distribution at every time step was written to a file. From the data generated, information such as mean particle (ensemble?) position was extracted for computation of the mean-square-displacement at every time step.
 
-The density distribution data was also turned into visual graphic that could show the evolution of the particle diffusion within the system, in time.
+\subsection{2D Heterogeneous Systems}
+	TBD.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\linewidth]{2d_unit_cell_2.png}
+		\caption{2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary and solid lines indicate absolute boundary.}
+		\label{fig:2d_unit_cell_2.png}
+	\end{figure}
 
-\section{1-Dimensional Systems}
-In 1D, homogenous and heterogeneous simple cell systems were simulated using Monte Carlo (MC) and master equation approaches. 
+\section{Master Equation Simulations}
+%General structure notes: should not really cover the theory of master equations, rather the implementation and related details. A, B, general pseudo-code example. An issue here might be figures; the same general figures are used in both sections... so where should they be presented?
 
-
-
-\subsection{Homogenous System}
-
-
-*include figure of homogenous model*
-
-\subsection{Heterogeneous System}
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1.0\linewidth]{1d_unit_cell_2.png}
-	\caption{2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable barrier.}
-	\label{fig:1d_unit_cell_2.png}
-\end{figure}
-
-\section{2-Dimensional System}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1.0\linewidth]{2d_unit_cell_2.png}
-	\caption{2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable barrier.}
-	\label{fig:2d_unit_cell_2.png}
-\end{figure}
-*include figure of heterogeneous model*
+	
+	Using the ME methods and evolving the particle density distribution in time, discontinuations (?) in the distributions are no longer an issue, however at the expense of no information on individual particle state.
+	
+	For both simulation methods, the computed density distribution at every time step was written to a file. From the data generated, information such as the mean position of the particles was extracted for computation of the mean-square-displacement (MSD) at every time step. From the MSD, effective particle diffusivities could be computed for various cellular and extracellular diffusivities, and geometrical variations of the model. The density distribution data was also turned into visual graphic that could show the evolution of the particle diffusion within the system, in time.
+	
+	
+	
+	
+	---
+	Application of both methods to calculate the effective particle diffusivities and to determine density distribution profiles. What kind of agreement do we have between the results from the two different methods? Both methods involve discretization (of what?) and so there is always some amount of discretization error. Is it negligible for our modelling purposes?
+	

@@ -8,7 +8,7 @@ We also performed an analysis: MSD, mean position, etc.?? Analysis is kind of em
 
 Overall overview to thesis? What kind of an overview? Or just a general background to some main concepts needed or used in this thesis? How does this compare with the abstract?
 	
-\section{Diffusion}
+\section{Diffusion Theory}
 \label{sec:intro-diffusion}
 Introduction.
 Theory.
@@ -16,12 +16,19 @@ Supporting Figures.
 
 Refer to page 91 in \citep{ap}. Figure 4.1 may also be used? Or is it too `simple'?
 
-\section{Monte Carlo Simulations}
+\section{Monte Carlo Theory}
 Introduction.
 Theory.
 Supporting figures.
 
-\section{Master Equation Simulations}
+The ``Monte Carlo method'' is a general probabilistic algorithm for estimating the probability of an event based on the a number of random trials.
+Lattice Monte Carlo (LMC) is basically a type of discretization method.
+Look into:
+%---Kinetic Monte Carlo: https://en.wikipedia.org/wiki/Kinetic_Monte_Carlo
+%---http://web5.uottawa.ca/www5/p2uo/website/res_lmc.shtml
+---
+
+\section{Master Equation Theory}
 Introduction.
 Theory.
 Supporting figures.
@@ -39,14 +46,14 @@ Nearly all human cells are microscopic in size; their diameters range from 7.5 \
 
 Each cell is enclosed by a plasma membrane that separates the cell contents from the surrounding environment. The inside of the cell is mostly composed of a gel-like substance called cytoplasm that is a dense arrangement of proteins, organelles, and other molecules, suspended in a watery fluid called cytosol. The dense crowding of molecules and organelles results in frequent physical interactions which promotes high metabolic efficiency \citep{ap}. All of the fluid inside the cell may be referred to as intracellular fluid or simply, cellular fluid (CF).
 
-The cellular fluid is separated from the extracellular fluid by the cell/plasma membrane. This membrane is a phospholipid bilayer with various embedded macromolecular structures. Each phospholipid molecule is amphiphatic, having both a hydrophobic and hydrophilic region. A collection of phospholipid molecules will naturally arrange themselves into a bilayer that does not allow water, polar molecules, or ions to pass through easily. However, water and other molecules or ions need to traverse this membrane and the water transporting task is accomplished by aquaporin gated channel proteins. Aquaporins facilitate the passive diffusion of water through the plasma membrane, between the intracellular and extracellular regions. \citep{ap}.
+The CF is separated from the extracellular fluid (ECF) by the cell/plasma membrane. This membrane is a phospholipid bilayer with various embedded macromolecular structures. Each phospholipid molecule is amphiphatic, having both a hydrophobic and hydrophilic region. A collection of phospholipid molecules will naturally arrange themselves into a bilayer that does not allow water, polar molecules, or ions to pass through easily. However, water and other molecules or ions need to traverse this membrane and the water transporting task is accomplished by aquaporin gated channel proteins. Aquaporins facilitate the passive diffusion of water through the plasma membrane, between the intracellular and extracellular regions. \citep{ap}.
 
 %These proteins belong to a larger class of proteins called integral membrane bound proteins; some of which act as transporters of various types of molecules or signal transducers.
 
 %Overall, most of the cytosol is water and the viscosity of the cytoplasm is approximately the same as pure water, although the diffusion of small molecules is approximately four times slower than in pure water, due mostly to collisions with the large numbers of macromolecules in the cytosol.
 
 \subsection{Tissues}
-In a multicellular organism, there are several levels of biological organization. A cell is the lowest level of organization that is considered living; tissues are the next higher level of organization and are composed of cells similar in structure and function. This ensemble of cells resides in an extracellular matrix (ECM); a medium containing water, fibrous and adhesive proteins, glycoproteins, and other molecules. The ECM varies in composition between different tissues, but providing structural support and facilitating cell-to-cell communication are common functions of the ECM. \textbf{Normally, the cytoplasm is more viscous than the extracellular matrix (is this true?)}. \citep{cr-biology}.
+In a multicellular organism, there are several levels of biological organization. A cell is the lowest level of organization that is considered living; tissues are the next higher level of organization and are composed of cells similar in structure and function. This ensemble of cells resides in an extracellular matrix (ECM); a medium containing water, fibrous and adhesive proteins, glycoproteins, and other molecules. The ECM varies in composition between different tissues, but providing structural support and facilitating cell-to-cell communication are common functions of the ECM. In some cells, the cytoplasm is more viscous than the extracellular matrix \citep{cr-biology}.
 
 
 

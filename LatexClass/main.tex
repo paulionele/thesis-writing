@@ -3,6 +3,13 @@
 %Comments:
 %--in order to specify the relative file path to the introduction document, need \subimport{}{}.
 \documentclass{jthesis}
+%\usepackage{algorithm}
+
+\usepackage[ruled,vlined]{algorithm2e}
+
+%\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+%\newcommand{\var}[1]{{\ttfamily#1}}% variable
+
 \usepackage{import}
 \graphicspath{ {../images/} }
 
@@ -33,8 +40,11 @@ Thank some people that you like here.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %Include the different document sections in the space below!
 \subimport{../chapters/}{introduction}
+\newpage
 \subimport{../chapters/}{methods}
+\newpage
 \subimport{../chapters/}{discussion}
+\newpage
 \subimport{../chapters/}{conclusion}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %

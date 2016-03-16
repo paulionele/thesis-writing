@@ -1,9 +1,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Composite cell showing various important and common internal cell structures. Most of the volume within the cell is occupied by the cytosol fluid. Figure courtesy of Essential Cell Biology, Alberts, 3rd.\relax }}{2}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A single 2D unit cell forms the building block of the 2D model. An example lattice arrangement is overlayed on the model to show possible particle positions. The dimensions of each domain can be adjusted individually by increasing or decreasing the number of lattice points used in the simulation. Dashed lines represent semi-permeable boundaries and lattice points outside the cell belong to adjacent cells.\relax }}{5}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces 2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable barrier.\relax }}{6}{figure.caption.12}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable barrier.\relax }}{7}{figure.caption.13}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A single 2D unit cell forms the building block of the 2D model. An example lattice arrangement is overlayed on the model to show possible particle positions. The dimensions of each domain can be adjusted individually by changing the number of lattice points used to define each dimension. Dashed lines represent semi-permeable boundaries and lattice points outside the cell belong to adjacent cells.\relax }}{5}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Homogenous 1D cell model with lattice overlay. The sold lines represent the absolute physical limits of the system and behave as reflecting boundaries.\relax }}{8}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Heterogeneous 2D unit cells with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary, separating regions characterized by different diffusivities.\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary and solid lines indicate absolute boundary.\relax }}{10}{figure.caption.15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
