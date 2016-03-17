@@ -23,21 +23,7 @@
 	It was decided from the start of the project that particles would move in the system by a constant jump/step-size, compared to a continuum step-size (ex. Gaussian). Although this particle behaviour is generally less representative of a real diffusion process and less accurate compared to continuum Monte Carlo (MC) methods and molecular dynamics simulations, the data generated would still be sufficiently accurate for our analytical purposes and be faster to compute. Fixed step-sizes in the particle movement results in a grid or lattice-like arrangement of particle positions over time. The process simulated is therefore said to be occur on a lattice as the particles are free to move, but only to fixed lattice positions. This manner of particle movement was implemented in both the MC and master equation (ME) simulations.
 
 	%Wrap up, cover remaining details, and state general goals of the simulations. 
-	Overall, the goals were to simulate the process of diffusion for homogenous and heterogeneous systems using MC and ME methods, calculate a mean-square-displacement (MSD) for every time step from the computed density distribution, and from the MSD, determine an effective diffusivity for the system. For both the MC and ME simulations, the particle density distribution data output was of the same form. MSD calculation implementations varied slightly between the MC and ME simulations, but the calculations for effective diffusivity were the same. 
-	
-	
-	
-	
-%	The effective diffusivity of the system is obtained in long-time limit using the Einstein-Smoluchowsky relation (kinetic theory):
-%	
-%	\begin{equation}
-%		D = \frac{\langle R^2 \rangle}{d\cdot t}
-%	\end{equation}
-%	
-%	where $ d $ is the dimensionality of the system; 1 for 1D systems and 2 for 2D systems.
-%	
-%	The mean displacement $ \langle R(t) \rangle $ of an increasing number of particles in the absence of external forces, approaches zero. The mean \textsl{square} displacement does not.
-	
+	Overall, the goals were to simulate the process of diffusion for homogenous and heterogeneous systems using MC and ME methods, calculate a mean-square-displacement (MSD) for every time step from the computed density distribution, and from the MSD, determine an effective diffusivity for the system. For both the MC and ME simulations, the particle density distribution data output was of the same form. MSD calculation implementations varied slightly between the MC and ME simulations, but the calculations for effective diffusivity were the same. 	
 
 %Further arrangement possibilities; do we sort the simulations by MC and ME sections with subsections on 1D and 2D systems with further subsubsections on homogenous and heterogenous systems? Even if we sort by 1D and 2D sections with homogenous and heterogenous subsections we still need to divide MC and ME into subsubsections. Too much nesting, I want to go no deeper than 2 nest levels and I don't want to have too much information in a single section and have a few lines in a subsection, it doesn't look good.
 
@@ -45,26 +31,6 @@
 %General structure notes: should not really cover the theory of Monte Carlo, rather the implementation and related details. Introduction applicable to all systems, why Monte Carlo, general pseudo-code example.
 
 	Using MC-based algorithms, information on the individual state of each particle including current position and path history, can be maintained. However, due to the finite number of particles used in the simulation and the stochastic nature of individual particle motion, statistical fluctuations lead to `non-smooth' density distributions. The use of MC algorithms in simulating the process of diffusion was motivated by the random nature of the diffusion process (Section \ref{sec:intro-diffusion}) at the level of the individual particle.
-	
-	Consider a particle at some position $ r_i $ on a lattice. In a real unrestricted diffusion process, the particle can move in any direction with any step-size. 
-	
-	MC methods require the generation of random numbers; these were generated during the execution of the simulation using the \texttt{rand()} C-library function and \texttt{RAND\textunderscore MAX} built-in constant. It was desired that the random numbers $ r_i $ be uniformly distributed over the interval $ 0 \leq r_i < 1 $, so all random numbers returned by the \texttt{rand()} call were normalized by \texttt{RAND\textunderscore MAX}.
-	
-%	\begin{algorithm}[t]
-%	  \caption{Simple Monte Carlo Algorithm}\label{smc}
-%	  \begin{algorithmic}[1]
-%	    %\Procedure{Monte Carlo}{$N,t_{\textrm{max}}$}\Comment{Necessary variables initialized.}
-%	    
-%	    \For{$i = 1,2,3,\cdots, N$}\Comment{Loop over all particles.}
-%	    	\State $ rnd\gets \texttt{rand()} $ \Comment{Random number $ \in [0,1] $.}
-%	    	\If{$ rnd < P_- $}
-%	    	
-%	    	
-%	    \EndFor
-%	    \State \textbf{return} $b$\Comment{The gcd is b}
-%	    \EndProcedure
-%	  \end{algorithmic}
-%	\end{algorithm}
 
 \subsection{1D Homogenous and Heterogeneous Systems}
 	A natural starting point for the project was 1D systems since they are more simple to model and simulate than those which are multidimensional. In our 1D simulations, particles move along a line and at any given lattice site, can move to either one of the two neighbour sites, unless an absolute boundary is met. A particle step-size of one lattice unit ($ a = 1 $) was used, meaning that the particle steps only a single lattice site in a randomly selected direction, each time step. This stepping distance is currently uncorrelated/uncalibrated with any physical or real distance. Each time step in the simulation is also uncorrelated with any characteristic or real time; in the simulation it is simply an integer used as a loop variable. Length and time-scale correlation with physical systems is possible but such an endeavour is outside the time limits of the current project.
@@ -103,9 +69,39 @@
 	\end{figure}
 	
 	\newpage
-	Our MC based simulation of diffusion requires a random number generator (pseudo-random uniform distribution) and a way to keep track of particle positions.
-
-
+	All directional stepping probabilities, boundary transition probabilities, region dimensions, number of particles used, and time step limit were initialized prior to running the simulation. More specifically, the region dimensions were defined by a number of lattice points used for that region (i.e. the length of a cellular space could be set as $ n $ lattice points). Therefore, the density of lattice points within any region was always the same, regardless of the size of that region. 
+	 	
+	Our MC-based simulations of diffusion require a `random' number generator. Pseudo-random numbers, drawn from a uniform distribution, were generated during the execution of the simulation using the \texttt{rand()} C-library function and \texttt{RAND\textunderscore MAX} built-in constant. It was desired that the random numbers (rnd) be uniformly distributed over the interval $ 0 \leq \textrm{rnd} < 1 $, so all random numbers returned by the \texttt{rand()} call were normalized by \texttt{RAND\textunderscore MAX}.
+	
+	The simulations produced a particle density distribution at every time step. One of the goals of this project was to compute the MSD of the particles at every time step and collect this data for further analysis. Since the individual position of each particle was tracked during the simulation, it was possible to calculate the MSD of all particles for a time step. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD:
+	
+	\begin{equation}
+		(\Delta x)^2 = \langle x_{i}^2 \rangle + \langle x_i \rangle^2
+	\end{equation}
+	
+	Where the angle brackets indicate mean values:
+	
+	\begin{equation}
+		\langle x_{i}^2 \rangle = \dfrac{1}{N}\sum_{i=1}^{N} x_{i}^2
+	\end{equation}
+	
+	\begin{equation}
+		\langle x_{i} \rangle = \dfrac{1}{N}\sum_{i=1}^{N} x_i
+	\end{equation}
+	
+	Since the particles experienced no external force, it was expected and shown that for every time step $ \langle x_{i} \rangle \approx x_0 $, where $ x_0 $ is the initial starting lattice site of all the particles. The mean-squared-position $ \langle x_{i}^2 \rangle $ was not constant for every time step, it increased with time reflecting the `spreading' of the particles outwards from their origin.
+	
+	-----
+	The effective diffusivity of the system is obtained in long-time limit using the Einstein-Smoluchowsky relation (kinetic theory):
+	
+	\begin{equation}
+		D = \frac{\langle R^2 \rangle}{d\cdot t}
+	\end{equation}
+	
+	where $ d $ is the dimensionality of the system; 1 for 1D systems and 2 for 2D systems.
+	
+	The mean displacement $ \langle R(t) \rangle $ of an increasing number of particles in the absence of external forces, approaches zero. The mean \textsl{square} displacement does not.
+		
 \subsection{2D Heterogeneous Systems}
 	TBD.
 	
