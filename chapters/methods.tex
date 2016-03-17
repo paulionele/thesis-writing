@@ -44,7 +44,7 @@
 		\label{fig:1d_unit_cell_1.png}
 	\end{figure}	
 	
-	In the heterogeneous system (Figure \ref{fig:1d_unit_cell_2.png}), a particle that is not at the absolute lattice limits and is not at a lattice site next to a permeable boundary, has an equal probability to step one lattice unit in either direction, same as in the homogenous system simulation. Particle behaviour at the absolute boundaries was handled the same way as in the homogenous system. The different diffusivities of the cellular and extracellular regions were simulated by using different stepping probabilities. We introduce the subscripts $ i $ and $ e $ to differentiate between stepping probabilities in the (\textsl{intra})cellular and extracellular domains: $ P_{x,i}^{+,-} $ and $ P_{x,e}^{+,-} $. Within each domain and excluding the lattice points at the boundaries, the behaviour of the particles was like that of the homogenous system. At the semipermeable boundaries, the following condition was necessary if the long-time density distribution was to be physically reasonable:
+	In the heterogeneous system (Figure \ref{fig:1d_unit_cell_2.png}), a particle that is not at the absolute lattice limits and is not at a lattice site next to a permeable boundary, has an equal probability to step one lattice unit in either direction, same as in the homogenous system simulation. Particle behaviour at the absolute boundaries was handled the same way as in the homogenous system. The different diffusivities of the cellular and extracellular regions were simulated by using different stepping probabilities. We introduce the subscripts $ i $ and $ e $ to differentiate between stepping probabilities in the (\textsl{intra})cellular and extracellular domains: $ P_{x,i}^{+,-} $ and $ P_{x,e}^{+,-} $. Within each domain and excluding the lattice points at the boundaries, the behaviour of the particles was like that of the homogenous system. At the semi-permeable boundaries, the following condition was necessary if the long-time density distribution was to be physically reasonable:
 	
 	\begin{equation}
 		\label{eq:isothermal}
@@ -56,6 +56,7 @@
 	As an example, consider a particle at a lattice site adjacent to semi-permeable boundary. If the particle is in a cellular region, the total transition probability for the particle to the extracellular region is the product of the transition probability from the cellular to extracellular region and the \textsl{cellular} directional stepping probability.
 	
 	\begin{equation}
+		\label{eq:total_transition_prob}
 		P_{\textrm{total},\, \textrm{i} \rightarrow \textrm{e}} = \left( \dfrac{P_{x,\textrm{e}}}{P_{x,\textrm{i}}}\right)  P_{\textrm{e}\rightarrow i} \cdot P_{x,i}
 	\end{equation}
 	
@@ -79,7 +80,7 @@
 		(\Delta x)^2 = \langle x_{i}^2 \rangle + \langle x_i \rangle^2
 	\end{equation}
 	
-	Where the angle brackets indicate mean values:
+	The angle brackets indicates the sum of the positions divided by the number of particles:
 	
 	\begin{equation}
 		\langle x_{i}^2 \rangle = \dfrac{1}{N}\sum_{i=1}^{N} x_{i}^2
@@ -89,7 +90,7 @@
 		\langle x_{i} \rangle = \dfrac{1}{N}\sum_{i=1}^{N} x_i
 	\end{equation}
 	
-	Since the particles experienced no external force, it was expected and shown that for every time step $ \langle x_{i} \rangle \approx x_0 $, where $ x_0 $ is the initial starting lattice site of all the particles. The mean-squared-position $ \langle x_{i}^2 \rangle $ was not constant for every time step, it increased with time reflecting the `spreading' of the particles outwards from their origin.
+	Since the particles experienced no external force, it was expected and shown that for every time step, $ \langle x_{i} \rangle \approx x_0 $, where $ x_0 $ is the initial starting lattice site of all the particles. The mean-squared-position $ \langle x_{i}^2 \rangle $ was not constant for every time step, it increased with time reflecting the `spreading' of the particles outwards from their origin.
 	
 	-----
 	The effective diffusivity of the system is obtained in long-time limit using the Einstein-Smoluchowsky relation (kinetic theory):
@@ -103,14 +104,18 @@
 	The mean displacement $ \langle R(t) \rangle $ of an increasing number of particles in the absence of external forces, approaches zero. The mean \textsl{square} displacement does not.
 		
 \subsection{2D Heterogeneous Systems}
-	TBD.
+	Simulations of particle diffusion were also performed for 2D systems. The 2D model developed and simulated was heterogeneous; no homogenous model was developed. The MC algorithm for the simulation of the 2D system was in principle the same as for the 1D heterogeneous system, however, there are a few important differences to note. For every given time step, a particle at some lattice site that is not at an absolute boundary has four directional steps available and particle movement in the orthogonal directions are independent but cannot both occur in a single time step. As in the 1D simulation, the particle moves `on a lattice' and a step-size of one lattice unit is permissible. The 2D unit cell is the building block of the 2D model. Each unit cell consists a cellular region separated from an extracellular region by a semi-permeable boundary. A key characteristic of the unit cell is that, when linked in series, an extracellular channel is formed. In Figure \ref{fig:2d_unit_cell_2.png}, this is visible as an uninterrupted region or channel in the lower half of the figure. It is possible to arrange more than one series of unit cells so that a larger $\left(  m \times n \right) $ unit cell configuration is obtained, but this was not studied. Only $\left(  1 \times n \right) $ unit cell models were simulated. 
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{2d_unit_cell_2.png}
-		\caption{2D lattice unit cell with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary and solid lines indicate absolute boundary.}
+		\caption{A $ \left( 1 \times n \right) $ series configuration of 2D unit cells with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary and solid lines indicate absolute boundary.}
 		\label{fig:2d_unit_cell_2.png}
 	\end{figure}
+	
+	In 2D, there are an additional two neighbour lattice sites the particle can move to. We introduce an additional set of directional stepping probabilities in $ \hat{y} $: $ P_{y,i}^{+,-} $ and $ P_{y,e}^{+,-} $. Therefore, the probability that the particle y-coordinate does not change for a given time step is $ P_{y}^s = 1 - P_{y}^{+} - P_{y}^{-}$. Similarly for the x-coordinate $ P_{x}^s = 1 - P_{x}^{+} - P_{x}^{-}$. So the total probability that a particle remains at its current lattice site is $ P^s = 1 - P_{x}^s - P_{y}^s$. When a random number is generated, its value is tested for membership in intervals defined by the stepping probabilities, and this determines the motion of the particle.
+	
+	Handling of the boundary transition probabilities was done in the same manner as the 1D simulation, in accordance with Equation \ref{eq:isothermal}. In the program developed, for every time step, the current particle position and possible future particle position are compared. If it is found that the future possible position is in a different region than the current position, then the probability to cross into the new region is Equation \ref{eq:total_transition_prob}
 
 \section{Master Equation Simulations}
 %General structure notes: should not really cover the theory of master equations, rather the implementation and related details. A, B, general pseudo-code example. An issue here might be figures; the same general figures are used in both sections... so where should they be presented?
