@@ -30,30 +30,34 @@
 	
 	Equation \ref{eq:1D-diffusion-equation-solution} was used to create the Fokker-Planck plot in Figure \ref{fig:11U_homogeneous_plots_1D}. The solution to \ref{eq:1D-diffusion-equation} is not a solution to a boundary value problem. For example, it is possible to solve \ref{eq:1D-diffusion-equation} for reflecting absolute boundary conditions: $ \rho_x(0,t) = \rho_x(L,t) = 0 $. It is even possible to solve it for `repeating' boundary conditions that represent semi-permeable internal boundaries (Jessica Cervi's thesis); these specific problems were not explored and are not discussed further. However, it is comparatively easy to obtain a solution to such a system with internal semi-permeable and absolute reflecting boundaries by utilizing MC and ME methods for the simulation of the system; Figure \ref{fig:11U_heterogeneous_plots_1D} shows such a solution.
 	
-	Note the agreement between the ME and MC simulation solutions and analytical solution. The MC simulation shows characteristic statistical fluctuations that reflect the underlying `random' movement of individual particles in the simulation. The relative magnitude of these fluctuations decreases with increasing particles used in the simulation; following the relation $ 1/\sqrt{N} $.
+	With reference to Figure \ref{fig:11U_homogeneous_plots_1D}, note the good agreement between the ME and MC simulation solutions and analytical solution. The ME simulation solution and analytical solution are perfectly superimposed. The MC simulation shows characteristic statistical fluctuations that reflect the underlying `random' movement of individual particles in the simulation. The relative magnitude of these fluctuations decreases with an increasing number of particles $ N $ according to $ 1/\sqrt{N} $.
 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/11U_heterogeneous_plots_1D}
-		\caption{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 1\cdot 10^5 $ particles in MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
+		\caption{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.05 $. $ N = 5 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
 		\label{fig:11U_heterogeneous_plots_1D}
 	\end{figure}
+	
+	Statistical fluctuations in the MC simulation solution are more visible in Figure \ref{fig:11U_heterogeneous_plots_1D}. The ME simulation was orders of magnitude faster in reaching completion and does not show any fluctuations since the density distribution is evolved in time under the assumption that there are \textsl{very} many particles at each lattice site. It is expected that in the limit of an infinite number of particles, the MC solution converges to the ME solution. Comparisons to analytical or numerical solutions of the Fokker-Planck equation were not made but doing so may be of interest in the future.
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/3U_heterogeneous_plots_1D}
-		\caption{}
+		\caption{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 90 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 8 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
 		\label{fig:3U_heterogeneous_plots_1D}
 	\end{figure}
+	
+	Interesting to note in Figure \ref{fig:11U_heterogeneous_plots_1D} and \ref{fig:3U_heterogeneous_plots_1D}, the magnitude of the fluctuations in the MC solution appear larger at higher densities and smaller at lower densities. In Figure \ref{fig:11U_heterogeneous_plots_1D}, extracellular regions with 4-times larger diffusivity equilibrate faster than the cellular regions; this is visible as `flat' versus `sloped' density distributions. Figure \ref{fig:3U_heterogeneous_plots_1D} shows behaviour at the absolute reflecting boundaries.
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/11U_heterogeneous_plots_1D_nonphysical}
-		\caption{Non-physical density distribution simulated by violating the semi-permeable boundary condition. Parameter specifications: 11 unit cells with 15 lattice sites per cellular and extracellular region. }
+		\caption{Non-physical density distribution simulated by violating the semi-permeable boundary condition. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. Vertical dashed lines show semi-permeable boundary positions. }
 		\label{fig:11U_heterogeneous_plots_1D_nonphysical}
 	\end{figure}
 	
-	The distribution in the long-time limit does not approach an equally uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner.
+	Figure The distribution in the long-time limit does not approach an equally uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner.
 
 \subsection{Total Transition Probability}
 
