@@ -2,8 +2,8 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{iii}{section*.2}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Author's Declaration}{iv}{section*.3}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Table of Contents}{v}{section*.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Figures}{vi}{section*.6}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Tables}{viii}{section*.8}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Figures}{vii}{section*.6}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Tables}{ix}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Diffusion Theory}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Monte Carlo Theory}{1}{section.1.2}
@@ -16,10 +16,11 @@
 \contentsline {subsection}{\numberline {2.1.2}2D Heterogeneous Systems}{11}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Master Equation Simulations}{13}{section.2.2}
 \contentsline {chapter}{\numberline {3}Results and Analysis}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}1D Systems}{17}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Total Transition Probability}{22}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Cellular and Extracellular Diffusivities}{22}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}2D Systems}{23}{section.3.2}
-\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{34}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{35}{section*.33}
-\contentsline {chapter}{\numberline {A}Appendix}{36}{appendix.A}
+\contentsline {section}{\numberline {3.1}Preparation for Analysis}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}1D Systems}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probability}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{23}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}2D Systems}{24}{section.3.3}
+\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{35}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{36}{section*.33}
+\contentsline {chapter}{\numberline {A}Appendix}{37}{appendix.A}

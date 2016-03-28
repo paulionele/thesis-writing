@@ -6,23 +6,23 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Heterogeneous 2D unit cells with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary, separating regions characterized by different diffusivities. Dots outside coloured regions indicate continuity of system.\relax }}{9}{figure.caption.13}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces A $ \left ( 1 \times n \right ) $ series configuration of 2D unit cells with cellular and extracellular regions. Dashed lines indicate semi-permeable boundary and solid lines indicate absolute boundary. Dots outside the coloured region indicate continuity of the system.\relax }}{12}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple 1D system with no internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Additionally, an exact solution to diffusion equation (Fokker-Planck) is plotted. Parameter specifications: 330 lattice sites, $ D = 0.1 $, $ N = 8\cdot 10^5 $ particles in MC simulation, and density normalized.\relax }}{18}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.05 $. $ N = 5 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.\relax }}{19}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 90 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 8 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.\relax }}{20}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Non-physical density distribution simulated by violating the semi-permeable boundary condition (sometimes known as the isothermal boundary condition). Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $ and $ P_{e\rightarrow i} = 0.005 $. Correctly chosen, $ P_{e\rightarrow i} = 0.0025 $. Vertical dashed lines show semi-permeable boundary positions. \relax }}{21}{figure.caption.18}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax }}{22}{figure.caption.19}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax }}{24}{figure.caption.20}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces \relax }}{25}{figure.caption.21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \relax }}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces \relax }}{27}{figure.caption.23}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \relax }}{27}{figure.caption.24}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces \relax }}{27}{figure.caption.25}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces \relax }}{27}{figure.caption.26}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces \relax }}{28}{figure.caption.27}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces \relax }}{29}{figure.caption.28}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces \relax }}{30}{figure.caption.29}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces \relax }}{31}{figure.caption.30}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces \relax }}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces \relax }}{33}{figure.caption.32}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple 1D system with no internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Additionally, an exact solution to diffusion equation (Fokker-Planck) is plotted. Parameter specifications: 330 lattice sites, $ D = 0.1 $, $ N = 8\cdot 10^5 $ particles in MC simulation, and density normalized.\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.05 $. $ N = 5 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 90 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 8 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 1D heterogeneous system with internal semi-permeable boundaries. Non-physical density distribution simulated by violating the semi-permeable boundary condition (sometimes known as the isothermal boundary condition). Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $ and $ P_{e\rightarrow i} = 0.005 $. Correctly chosen, $ P_{e\rightarrow i} = 0.0025 $. Vertical dashed lines show semi-permeable boundary positions. \relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax }}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces \relax }}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \relax }}{28}{figure.caption.26}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces \relax }}{29}{figure.caption.27}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces \relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces \relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces \relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces \relax }}{33}{figure.caption.31}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces \relax }}{34}{figure.caption.32}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

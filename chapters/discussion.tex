@@ -1,8 +1,41 @@
 \chapter{Results and Analysis}
 \label{chapter:results-analysis}
 	
-	In this chapter, we begin an analysis of 1D heterogeneous systems first, then move our attention to 2D heterogeneous systems. Although 1D homogeneous systems were simulated, they did not provide any interesting or new insight into diffusive behaviour, therefore those simulations and analytical data are not presented in detail. We begin each section with selected images of simulated density distributions to motivate further analysis. More specifically, we analyze how changing the boundary transition probabilities, region diffusivities, and cell geometry (2D only), affects the mean-squared-displacement (MSD) and show that sub- and super-diffusive regimes exist. Lastly, we show that the long-time effective diffusivity is non-trivial even for simple-cell geometries.
+	In this chapter, we begin an analysis of 1D heterogeneous systems, then move our attention to 2D heterogeneous systems. Although 1D homogeneous systems were simulated, they did not provide any interesting or new insight into diffusive behaviour, therefore those simulations and analytical data are not presented in detail. We begin each section with selected images of simulated density distributions to motivate further analysis. More specifically, we analyze how changing the boundary transition probabilities, region diffusivities, and cell geometry (2D only), affects the mean-squared-displacement (MSD) and show that sub- and super-diffusive regimes exist. Lastly, we show that the long-time effective diffusivity is non-trivial even for simple-cell geometries.
+	
+\section{Preparation for Analysis}
+	Since the same tools will be used to analyze similar plots for the 1D and 2D systems, this section serves to outline some fundamentals that will be referred to and utilized frequently in the analysis.
+	
+	The analytical data computed from the density distribution at every time step included the MSD: $ \langle \Delta x^2 \rangle = \langle x^2 \rangle - \langle x \rangle^2 $. Einstein's diffusion equation says that for steady/regular diffusion in one dimension, the following relationship is valid: $ \langle \Delta x^2 \rangle = 2D \cdot t $. Essentially, in the case of steady diffusion, it is expected that the MSD increases linearly with time and furthermore, the log-log plot of such a relation has a slope of unity, since $ t $ is raised to the power of 1. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. We introduce a modified Einstein's diffusion equation with an additional exponential factor $ \beta $.
+	
+	\begin{equation}
+	\label{eq:einstein-modified}
+		\langle \Delta x^2 \rangle = 2D \cdot t^{\beta}
+	\end{equation}
+	
+	This factor $ \beta $ can be used to determine and quantify the diffusion regime of the system. Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified} gives:
+
+	\begin{equation}
+		\log\left( \langle \Delta x^2 \rangle \right) = \beta \cdot \log(t) + \log(2D)
+	\end{equation}	
+	
+	On a linear plot, this appears as a relation of the form $ Y = \beta X + C $ and if $ \beta = 1 $, then the diffusion process is steady. It is possible to determine what $ \beta $ is as a function of time. If we take the derivative $ dY/dX $, then:
+	
+	\begin{equation}
+		\dfrac{dY}{dX} = \beta (t)
+	\end{equation}
+	
+	A plot of $ \beta (t) $ versus $ t $ can reveal the magnitude of the non-linearity and identify the diffusion regime (sub- or super-diffusive) the entire system is in at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
+	
+	Another analytical quantity of interest was the effective diffusion coefficient $ D_\textrm{eff} $. The effective diffusion at any point in time may be calculated from Einstein's diffusion equation.
+	
+	\begin{equation}
+		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
+	\end{equation}
+	
+	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining the long-time effective diffusion and comparing 
 	 
+	
 \section{1D Systems}
 \label{sec:ra-1D}
 	For very large systems or short simulation times---conditions where the density distribution is zero at the absolute boundaries---agreement between the Monte Carlo (MC) and master equation (ME) simulation solutions, and analytical solutions (\ref{eq:1D-diffusion-equation-solution}) of the 1D diffusion equation with no net drift and constant diffusion factor (\ref{eq:1D-diffusion-equation}), was observed (Figure \ref{fig:11U_homogeneous_plots_1D}). 
@@ -28,7 +61,7 @@
 		\rho(x,t)=\frac{N}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}
 	\end{equation}	
 	
-	Equation \ref{eq:1D-diffusion-equation-solution} was used to create the Fokker-Planck plot in Figure \ref{fig:11U_homogeneous_plots_1D}. The solution to \ref{eq:1D-diffusion-equation} is not a solution to a boundary value problem. For example, it is possible to solve \ref{eq:1D-diffusion-equation} for reflecting absolute boundary conditions: $ \rho_x(0,t) = \rho_x(L,t) = 0 $. It is even possible to solve it for `repeating' boundary conditions that represent semi-permeable internal boundaries (Jessica Cervi's thesis); these specific problems were not explored and are not discussed further. However, it is comparatively easy to obtain a solution to such a system with internal semi-permeable and absolute reflecting boundaries by utilizing MC and ME methods for the simulation of the system; Figure \ref{fig:11U_heterogeneous_plots_1D} shows such a solution.
+	A variant of Equation \ref{eq:1D-diffusion-equation-solution} was used to create the Fokker-Planck plot in Figure \ref{fig:11U_homogeneous_plots_1D}. The solution to \ref{eq:1D-diffusion-equation} is not a solution to a boundary value problem. For example, it is possible to solve \ref{eq:1D-diffusion-equation} for reflecting absolute boundary conditions: $ \rho_x(0,t) = \rho_x(L,t) = 0 $. It is even possible to solve it for `repeating' boundary conditions that represent semi-permeable internal boundaries (Jessica Cervi's thesis); these specific problems were not explored and are not discussed further. However, it is comparatively easy to obtain a solution to such a system with internal semi-permeable and absolute reflecting boundaries by utilizing MC and ME methods for the simulation of the system; Figure \ref{fig:11U_heterogeneous_plots_1D} shows such a solution.
 	
 	With reference to Figure \ref{fig:11U_homogeneous_plots_1D}, note the good agreement between the ME and MC simulation solutions and analytical solution. The ME simulation solution and analytical solution are perfectly superimposed. The MC simulation shows characteristic statistical fluctuations that reflect the underlying `random' movement of individual particles in the simulation. The relative magnitude of these fluctuations decreases with an increasing number of particles $ N $ according to $ 1/\sqrt{N} $.
 
@@ -59,7 +92,12 @@
 	
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
 
-\subsection{Total Transition Probability}
+	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular diffusivities while maintain the semi-permeable boundary transition probability constant.	In both sections and for all simulations, the size of the unit cell was constant, and cellular and extracellular regions were of the same dimensions.
+\subsection{Boundary Transition Probability}
+\label{sec:1D-boundary-transition-probability}
+	The total transition probability is the probability that a particle steps towards a semi-permeable boundary and then crosses that boundary. 
+	
+	 Referring to Figure \ref{fig:pie_msd_1D}, the slope is clearly not unity for some of the plots.
 	
 	\begin{figure}[h]
 		\centering
@@ -76,6 +114,7 @@
 	\end{figure}
 
 \subsection{Cellular and Extracellular Diffusivities}
+\label{sec:1D-cellular-extracellular-diffusivities}
 	
 	\begin{figure}[h]
 		\centering
@@ -95,7 +134,6 @@
 \section{2D Systems}
 \label{sec:ra-2D}
 
-	Hello begin by writing.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/heterogeneous_3U_2D}
