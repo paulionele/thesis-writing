@@ -4,7 +4,7 @@
 	In this chapter, we begin an analysis of 1D heterogeneous systems, then move our attention to 2D heterogeneous systems. Although 1D homogeneous systems were simulated, they did not provide any interesting or new insight into diffusive behaviour, therefore those simulations and analytical data are not presented in detail. We begin each section with selected images of simulated density distributions to motivate further analysis. More specifically, we analyze how changing the boundary transition probabilities, region diffusivities, and cell geometry (2D only), affects the mean-squared-displacement (MSD) and show that sub- and super-diffusive regimes exist. Lastly, we show that the long-time effective diffusivity is non-trivial even for simple-cell geometries.
 	
 \section{Preparation for Analysis}
-	Since the same tools will be used to analyze similar plots for the 1D and 2D systems, this section serves to outline some fundamentals that will be referred to and utilized frequently in the analysis.
+	Since the same tools will be used to analyze similar plots for the 1D and 2D systems, this section serves to outline fundamentals that will be referred to and utilized frequently in the analysis.
 	
 	The analytical data computed from the density distribution at every time step included the MSD: $ \langle \Delta x^2 \rangle = \langle x^2 \rangle - \langle x \rangle^2 $. Einstein's diffusion equation says that for steady/regular diffusion in one dimension, the following relationship is valid: $ \langle \Delta x^2 \rangle = 2D \cdot t $. Essentially, in the case of steady diffusion, it is expected that the MSD increases linearly with time and furthermore, the log-log plot of such a relation has a slope of unity, since $ t $ is raised to the power of 1. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. We introduce a modified Einstein's diffusion equation with an additional exponential factor $ \beta $.
 	
@@ -13,7 +13,7 @@
 		\langle \Delta x^2 \rangle = 2D \cdot t^{\beta}
 	\end{equation}
 	
-	This factor $ \beta $ can be used to determine and quantify the diffusion regime of the system. Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified} gives:
+	This factor $ \beta $ can be used to determine and quantify the diffusion regime of the system at some time $ t $. Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified}:
 
 	\begin{equation}
 		\log\left( \langle \Delta x^2 \rangle \right) = \beta \cdot \log(t) + \log(2D)
@@ -25,7 +25,7 @@
 		\dfrac{dY}{dX} = \beta (t)
 	\end{equation}
 	
-	A plot of $ \beta (t) $ versus $ t $ can reveal the magnitude of the non-linearity and identify the diffusion regime (sub- or super-diffusive) the entire system is in at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
+	A plot of $ \beta (t) $ versus $ t $ reveals the magnitude of the non-linearity and identifies if the diffusion process occurring sub- or super-diffusive at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
 	
 	Another analytical quantity of interest was the effective diffusion coefficient $ D_\textrm{eff} $. The effective diffusion at any point in time may be calculated from Einstein's diffusion equation.
 	
@@ -33,7 +33,7 @@
 		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
 	\end{equation}
 	
-	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining the long-time effective diffusion and comparing 
+	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining how the long-time effetcive diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry (2D).
 	 
 	
 \section{1D Systems}
@@ -47,7 +47,7 @@
 		\label{fig:11U_homogeneous_plots_1D}
 	\end{figure}
 	
-	The 1D diffusion equation \ref{eq:1D-diffusion-equation} may be known as a `simple' Fokker-Planck or Smoluchowski equation and is sometimes utilized as a model of classical Brownian motion.
+	\nointerlineskip The 1D diffusion equation \ref{eq:1D-diffusion-equation} may be known as a `simple' Fokker-Planck or Smoluchowski equation and is sometimes utilized as a model of classical Brownian motion.
 	
 	\begin{equation}
 	\label{eq:1D-diffusion-equation}
@@ -81,6 +81,7 @@
 		\label{fig:3U_heterogeneous_plots_1D}
 	\end{figure}
 	
+	\newpage
 	Interesting to note in Figure \ref{fig:11U_heterogeneous_plots_1D} and \ref{fig:3U_heterogeneous_plots_1D}, the magnitude of the fluctuations in the MC solution appear larger at higher densities and smaller at lower densities. In Figure \ref{fig:11U_heterogeneous_plots_1D}, extracellular regions with 4-times larger diffusivity equilibrate faster than the cellular regions; this is visible as `flat' versus `sloped' density distributions. Figure \ref{fig:3U_heterogeneous_plots_1D} shows behaviour at the absolute reflecting boundaries.
 	
 	\begin{figure}[h]
@@ -90,29 +91,33 @@
 		\label{fig:11U_heterogeneous_plots_1D_nonphysical}
 	\end{figure}
 	
+	\newpage
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
-
+	
+	\newpage
 	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular diffusivities while maintain the semi-permeable boundary transition probability constant.	In both sections and for all simulations, the size of the unit cell was constant, and cellular and extracellular regions were of the same dimensions.
+	
 \subsection{Boundary Transition Probability}
 \label{sec:1D-boundary-transition-probability}
-	The total transition probability is the probability that a particle steps towards a semi-permeable boundary and then crosses that boundary. 
+	The total transition probability is the product of two probabilities; the probability that a particle steps towards a boundary and the transition probability. The transition probability $ P_{i \rightarrow e} $ (``pie" in figure) is specified but the corresponding probability  $ P_{e \rightarrow i} $ can be easily calculated since the probabilities are coupled. For each plot, a different transition probability tested while all other parameters were held constant.
 	
-	 Referring to Figure \ref{fig:pie_msd_1D}, the slope is clearly not unity for some of the plots.
-	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_msd_1D}
-		\caption{}
+		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.2 $ for top dashed line, $ D = 0.05 $ for middle dashed line, and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the bottom dashed line (an average of the transition probabilities).}
 		\label{fig:pie_msd_1D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	 In Figure \ref{fig:pie_msd_1D}, the slope is clearly not unity for all time, for most of the plots, indicating the presence of anomalous diffusion. With decreasing transition probability, the magnitude of deviation from steady diffusion increases. Interestingly, for the largest transition probability simulated ($ P_{i \rightarrow e} = 0.150 $), the magnitude of deviation from steady diffusion is very small. It may be possible that for large transition probabilities, as long as the semi-permeable boundary transition condition is respected, approximately steady diffusion occurs for all time. In the long-time, the diffusion process becomes steady again for all transition probabilities tested and it appears that the effective diffusivity approaches an average of the boundary transition probabilities. This is shown for $ P_{i \rightarrow e} = 0.150 $ and is observed for the other transition probabilities as well; however, this `average approach" sometimes under- or over-estimates the effective diffusivity obtained in the simulations.
+	
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_beta_deff_1D}
-		\caption{}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
 		\label{fig:pie_beta_deff_1D}
 	\end{figure}
 
+\newpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:1D-cellular-extracellular-diffusivities}
 	
