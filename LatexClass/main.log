@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  28 MAR 2016 18:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  28 MAR 2016 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,141 +1032,141 @@ File: ../images/1D/pie_msd_1D.png Graphic file (type png)
 Package pdftex.def Info: ../images/1D/pie_msd_1D.png used on input line 106.
 (pdftex.def)             Requested size: 433.62001pt x 336.66162pt.
  [24 <../images/1D/pie_msd_1D.png>]
-<../images/1D/pie_beta_deff_1D.png, id=601, 841.9455pt x 872.2989pt>
+<../images/1D/pie_beta_deff_1D.png, id=602, 841.9455pt x 858.5676pt>
 File: ../images/1D/pie_beta_deff_1D.png Graphic file (type png)
 
 <use ../images/1D/pie_beta_deff_1D.png>
 Package pdftex.def Info: ../images/1D/pie_beta_deff_1D.png used on input line 1
-15.
-(pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
+21.
+(pdftex.def)             Requested size: 433.62001pt x 442.1738pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] <../images/1D/pipe_msd_1D.png, id=606, 669.9429pt x 531.9072pt>
+[25] <../images/1D/pipe_msd_1D.png, id=607, 669.9429pt x 531.9072pt>
 File: ../images/1D/pipe_msd_1D.png Graphic file (type png)
 
 <use ../images/1D/pipe_msd_1D.png>
-Package pdftex.def Info: ../images/1D/pipe_msd_1D.png used on input line 126.
+Package pdftex.def Info: ../images/1D/pipe_msd_1D.png used on input line 133.
 (pdftex.def)             Requested size: 433.62001pt x 344.27464pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/1D/pipe_beta_deff_1D.png, id=607, 841.9455pt x 872.2989pt>
+<../images/1D/pipe_beta_deff_1D.png, id=608, 841.9455pt x 872.2989pt>
 File: ../images/1D/pipe_beta_deff_1D.png Graphic file (type png)
 
 <use ../images/1D/pipe_beta_deff_1D.png>
 Package pdftex.def Info: ../images/1D/pipe_beta_deff_1D.png used on input line 
-133.
+140.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26 <../images/1D/pie_beta_deff_1D.png>]
-<../images/2D/heterogeneous_3U_2D.png, id=613, 1725.0849pt x 620.0766pt>
+<../images/2D/heterogeneous_3U_2D.png, id=614, 1725.0849pt x 620.0766pt>
 File: ../images/2D/heterogeneous_3U_2D.png Graphic file (type png)
 
 <use ../images/2D/heterogeneous_3U_2D.png>
 Package pdftex.def Info: ../images/2D/heterogeneous_3U_2D.png used on input lin
-e 144.
+e 151.
 (pdftex.def)             Requested size: 433.62001pt x 155.86084pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/MC_heterogeneous_3U_2D.png, id=614, 1720.7487pt x 591.8913pt>
+<../images/2D/MC_heterogeneous_3U_2D.png, id=615, 1720.7487pt x 591.8913pt>
 File: ../images/2D/MC_heterogeneous_3U_2D.png Graphic file (type png)
 
 <use ../images/2D/MC_heterogeneous_3U_2D.png>
 Package pdftex.def Info: ../images/2D/MC_heterogeneous_3U_2D.png used on input 
-line 151.
+line 158.
 (pdftex.def)             Requested size: 433.62001pt x 149.15558pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/heterogeneous_11U_2D.png, id=615, 1717.1352pt x 184.2885pt>
+<../images/2D/heterogeneous_11U_2D.png, id=616, 1717.1352pt x 184.2885pt>
 File: ../images/2D/heterogeneous_11U_2D.png Graphic file (type png)
 
 <use ../images/2D/heterogeneous_11U_2D.png>
 Package pdftex.def Info: ../images/2D/heterogeneous_11U_2D.png used on input li
-ne 158.
+ne 165.
 (pdftex.def)             Requested size: 433.62001pt x 46.53598pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/error_in_diffusion.png, id=616, 1050.92625pt x 360.34625pt>
+<../images/2D/error_in_diffusion.png, id=617, 1050.92625pt x 360.34625pt>
 File: ../images/2D/error_in_diffusion.png Graphic file (type png)
 
 <use ../images/2D/error_in_diffusion.png>
 Package pdftex.def Info: ../images/2D/error_in_diffusion.png used on input line
- 165.
+ 172.
 (pdftex.def)             Requested size: 433.62001pt x 148.68315pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/pie_msd_2D.png, id=617, 629.4717pt x 474.8139pt>
+<../images/2D/pie_msd_2D.png, id=618, 629.4717pt x 474.8139pt>
 File: ../images/2D/pie_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/pie_msd_2D.png>
-Package pdftex.def Info: ../images/2D/pie_msd_2D.png used on input line 172.
+Package pdftex.def Info: ../images/2D/pie_msd_2D.png used on input line 179.
 (pdftex.def)             Requested size: 433.62001pt x 327.07857pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/pie_beta_deff_2D.png, id=618, 841.9455pt x 872.2989pt>
+<../images/2D/pie_beta_deff_2D.png, id=619, 841.9455pt x 872.2989pt>
 File: ../images/2D/pie_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/pie_beta_deff_2D.png>
 Package pdftex.def Info: ../images/2D/pie_beta_deff_2D.png used on input line 1
-79.
+86.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/pipe_msd_2D.png, id=619, 677.8926pt x 508.0581pt>
+<../images/2D/pipe_msd_2D.png, id=620, 677.8926pt x 508.0581pt>
 File: ../images/2D/pipe_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/pipe_msd_2D.png>
-Package pdftex.def Info: ../images/2D/pipe_msd_2D.png used on input line 186.
+Package pdftex.def Info: ../images/2D/pipe_msd_2D.png used on input line 193.
 (pdftex.def)             Requested size: 433.62001pt x 324.98552pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/pipe_beta_deff_2D.png, id=620, 841.9455pt x 872.2989pt>
+<../images/2D/pipe_beta_deff_2D.png, id=621, 841.9455pt x 872.2989pt>
 File: ../images/2D/pipe_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/pipe_beta_deff_2D.png>
 Package pdftex.def Info: ../images/2D/pipe_beta_deff_2D.png used on input line 
-193.
+200.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/ye_msd_2D.png, id=621, 730.6497pt x 550.6974pt>
+<../images/2D/ye_msd_2D.png, id=622, 730.6497pt x 550.6974pt>
 File: ../images/2D/ye_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/ye_msd_2D.png>
-Package pdftex.def Info: ../images/2D/ye_msd_2D.png used on input line 200.
+Package pdftex.def Info: ../images/2D/ye_msd_2D.png used on input line 207.
 (pdftex.def)             Requested size: 433.62001pt x 326.83293pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/ye_beta_deff_2D.png, id=622, 841.9455pt x 872.2989pt>
+<../images/2D/ye_beta_deff_2D.png, id=623, 841.9455pt x 872.2989pt>
 File: ../images/2D/ye_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/ye_beta_deff_2D.png>
-Package pdftex.def Info: ../images/2D/ye_beta_deff_2D.png used on input line 20
-7.
+Package pdftex.def Info: ../images/2D/ye_beta_deff_2D.png used on input line 21
+4.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
@@ -1224,10 +1224,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on main.pdf (47 pages, 1525219 bytes).
+Output written on main.pdf (47 pages, 1520917 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 536 compressed objects within 6 object streams
+ 767 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
  117 named destinations out of 1000 (max. 500000)
  329 words of extra memory for PDF output out of 10000 (max. 10000000)
 

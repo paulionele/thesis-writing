@@ -95,7 +95,7 @@
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
 	
 	\newpage
-	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular diffusivities while maintain the semi-permeable boundary transition probability constant.	In both sections and for all simulations, the size of the unit cell was constant, and cellular and extracellular regions were of the same dimensions.
+	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintain the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
 	
 \subsection{Boundary Transition Probability}
 \label{sec:1D-boundary-transition-probability}
@@ -108,7 +108,11 @@
 		\label{fig:pie_msd_1D}
 	\end{figure}
 	
-	 In Figure \ref{fig:pie_msd_1D}, the slope is clearly not unity for all time, for most of the plots, indicating the presence of anomalous diffusion. With decreasing transition probability, the magnitude of deviation from steady diffusion increases. Interestingly, for the largest transition probability simulated ($ P_{i \rightarrow e} = 0.150 $), the magnitude of deviation from steady diffusion is very small. It may be possible that for large transition probabilities, as long as the semi-permeable boundary transition condition is respected, approximately steady diffusion occurs for all time. In the long-time, the diffusion process becomes steady again for all transition probabilities tested and it appears that the effective diffusivity approaches an average of the boundary transition probabilities. This is shown for $ P_{i \rightarrow e} = 0.150 $ and is observed for the other transition probabilities as well; however, this `average approach" sometimes under- or over-estimates the effective diffusivity obtained in the simulations.
+	 In Figure \ref{fig:pie_msd_1D}, the slope is clearly not unity for all time, for most of the plots, indicating the presence of anomalous diffusion. With decreasing transition probability, the magnitude of deviation from steady diffusion increases. Interestingly, for the largest transition probability simulated ($ P_{i \rightarrow e} = 0.150 $), the magnitude of deviation from steady diffusion is very small. It may be possible that for large transition probabilities, as long as the semi-permeable boundary transition condition is respected, approximately steady diffusion occurs for all time. In the long-time, the diffusion process becomes steady again for all transition probabilities tested. 
+	 
+	 In Figure \ref{fig:pie_beta_deff_1D}, the extent of the anomalous diffusion is clear in the $ \beta (t) $ versus $ t $ top figure. For all transition probabilities, steady diffusion occurs from the start of the simulation to some time where particles meet the semi-permeable boundary; this occurs at the same time for all simulations since C/EC diffusivity was constant. Both the magnitude of sub-diffusive behaviour and length of time before reaching steady diffusion, increase with decreasing transition probability. Super-diffusive behaviour appears only for two transition probabilities; it might be interesting to find the threshold transition probability that results in super-diffusive behaviour.
+	 
+	 In the bottom figure, the effective diffusivity approaches an average of the boundary transition probabilities, at least for transition probabilities much smaller than C/EC diffusivities. This is shown for $ P_{i \rightarrow e} = 0.150 $ and is observed for the other transition probabilities as well; however, this `average approach' sometimes under- or over-estimates the effective diffusivity obtained in the simulations and does not work well for transition probabilities approaching C/EC diffusivities, which may indicate dependence on regional diffusivities.
 	
 	\begin{figure}[h!]
 		\centering
@@ -120,6 +124,7 @@
 \newpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:1D-cellular-extracellular-diffusivities}
+	For each plot, the ratio of cellular to extracellular diffusivities (indicated as pi/pe on the figures), while all other parameters were held constant. More specifically, the cellular diffusivity was varied while the extracellular diffusivity was constant.
 	
 	\begin{figure}[h]
 		\centering
