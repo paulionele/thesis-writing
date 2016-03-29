@@ -95,10 +95,10 @@
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
 	
 	\newpage
-	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintaining the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
+	Section \ref{sec:1D-boundary-transition-probabilities} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintaining the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
 	
-\subsection{Boundary Transition Probability}
-\label{sec:1D-boundary-transition-probability}
+\subsection{Boundary Transition Probabilities}
+\label{sec:1D-boundary-transition-probabilities}
 	The total transition probability is the product of two probabilities; the probability that a particle steps towards a boundary and the transition probability. The transition probability $ P_{i \rightarrow e} $ (``pie" in figure) is specified but the corresponding probability  $ P_{e \rightarrow i} $ can be easily calculated since the probabilities are coupled. For each plot, a different transition probability tested while all other parameters were held constant.
 	
 	\begin{figure}[h!]
@@ -129,7 +129,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_msd_1D}
-		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. }
+		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
 		\label{fig:pipe_msd_1D}
 	\end{figure}
 	
@@ -147,7 +147,7 @@
 \clearpage
 \section{2D Systems}
 \label{sec:ra-2D}
-	The analysis of 2D systems proceeded in the same manner as for 1D systems, except with the addition of another variable for testing: extracellular channel width. Section \ref{sec:2D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining C/EC diffusivities and channel width, constant. The second section \ref{sec:2D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the C/EC diffusivities while maintaining the semi-permeable boundary transition probabilities and channel width, constant. The third and final section \ref{sec:2D-channel-width} explores the effects of changing the width of the extracellular channel in $ \hat{y} $ while maintaining the ratio of C/EC diffusivities and semi-permeable boundary transition probabilities, constant.
+	The analysis of 2D systems proceeded in the same manner as for 1D systems, except with the addition of another variable for testing: extracellular channel width. Section \ref{sec:2D-boundary-transition-probabilities} explores the effects of changing the semi-permeable boundary transition probability while maintaining C/EC diffusivities and channel width, constant. The second section \ref{sec:2D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the C/EC diffusivities while maintaining the semi-permeable boundary transition probabilities and channel width, constant. The third and final section \ref{sec:2D-channel-width} explores the effects of changing the width of the extracellular channel in $ \hat{y} $ while maintaining the ratio of C/EC diffusivities and semi-permeable boundary transition probabilities, constant.
 	
 	The 2D system is divided into two halves, upper and lower. The upper halve consists of alternating cellular and extracellular regions of the same and square geometry; the dimensions of these regions were the same for every simulation. The lower halve consists of a single extracellular channel.
 	
@@ -182,25 +182,33 @@
 	\end{figure}
 
 \clearpage
-\subsection{Boundary Transition Probability}
-\label{sec:2D-boundary-transition-probability}
+\subsection{Boundary Transition Probabilities}
+\label{sec:2D-boundary-transition-probabilities}
 
-	\begin{figure}[h]
+	For all transition probabilities tested, anomalous diffusion behaviour is present. Inspection of the MSD versus time plots in Figure \ref{fig:pie_msd_2D}, shows initial sub-diffusive behaviour caused by particles meeting semi-permeable boundary of the starting region, followed by super-diffusive behaviour as particles exit their initial enclosure and reach the high-diffusivity extracellular region.  Note that a single MC simulation was run with the same parameters as the corresponding ME simulation. The two are in good agreement but $ D_\textrm{eff} $ calculated from the MC simulation is slightly smaller than calculated from the ME simulation, beyond a time where most particles have left the starting region.
+	
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_msd_2D}
-		\caption{}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:pie_msd_2D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	Referring to Figure \ref{fig:pie_beta_deff_2D}, similar to the 1D case, the magnitude of the deviation from steady diffusion decreases with increasing transition probability, except now there is also super-diffusive behaviour present due to the extracellular channel. Observe the diffusive behaviour in the case of $ P_{i \rightarrow e}  = 0.150 $, there is a temporary plateau where the magnitude of super-diffusive behaviour is constant for some interval of time. Interestingly, in the $ \beta $ versus $ \log(t) $ plot, the time difference between the maximum and minimum of each plot increases with decreasing transition probability. This says the time spent in anomalous diffusion by a system increases with decreasing transition probability.
+	
+	The effective diffusivity in the long-time is non-trivial and its dependence on the boundary transition probabilities, C/EC diffusivity ratios, and channel geometry is not obvious.
+	
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_beta_deff_2D}
-		\caption{}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:pie_beta_deff_2D}
 	\end{figure}
 
+\clearpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:2D-cellular-extracellular-diffusivities}	
+	TBD.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
@@ -215,9 +223,10 @@
 		\label{fig:pipe_beta_deff_2D}
 	\end{figure}
 	
+\clearpage
 \subsection{Extracellular Channel Widths}
 \label{sec:2D-channel-width}
-	In this section	
+	TBD.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_msd_2D}

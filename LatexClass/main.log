@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  29 MAR 2016 01:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  29 MAR 2016 02:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,84 +1094,82 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [31 <../images/2D/heterogeneous_3U_2D.png> <../images/2D/MC_heterogeneous_3U_
 2D.png> <../images/2D/heterogeneous_11U_2D.png>] [32 <../images/2D/error_in_dif
-fusion.png>] <../images/2D/pie_msd_2D.png, id=573, 629.4717pt x 474.8139pt>
+fusion.png>] <../images/2D/pie_msd_2D.png, id=574, 629.4717pt x 474.8139pt>
 File: ../images/2D/pie_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/pie_msd_2D.png>
-Package pdftex.def Info: ../images/2D/pie_msd_2D.png used on input line 190.
+Package pdftex.def Info: ../images/2D/pie_msd_2D.png used on input line 192.
 (pdftex.def)             Requested size: 433.62001pt x 327.07857pt.
+ [33
 
-<../images/2D/pie_beta_deff_2D.png, id=574, 841.9455pt x 872.2989pt>
+ <../images/2D/pie_msd_2D.png>]
+<../images/2D/pie_beta_deff_2D.png, id=582, 841.9455pt x 872.2989pt>
 File: ../images/2D/pie_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/pie_beta_deff_2D.png>
-Package pdftex.def Info: ../images/2D/pie_beta_deff_2D.png used on input line 1
-97.
+Package pdftex.def Info: ../images/2D/pie_beta_deff_2D.png used on input line 2
+03.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../images/2D/pipe_msd_2D.png, id=575, 677.8926pt x 508.0581pt>
+[34] [35 <../images/2D/pie_beta_deff_2D.png>]
+<../images/2D/pipe_msd_2D.png, id=593, 677.8926pt x 508.0581pt>
 File: ../images/2D/pipe_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/pipe_msd_2D.png>
-Package pdftex.def Info: ../images/2D/pipe_msd_2D.png used on input line 206.
+Package pdftex.def Info: ../images/2D/pipe_msd_2D.png used on input line 214.
 (pdftex.def)             Requested size: 433.62001pt x 324.98552pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../images/2D/pipe_beta_deff_2D.png, id=576, 841.9455pt x 872.2989pt>
+<../images/2D/pipe_beta_deff_2D.png, id=594, 841.9455pt x 872.2989pt>
 File: ../images/2D/pipe_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/pipe_beta_deff_2D.png>
 Package pdftex.def Info: ../images/2D/pipe_beta_deff_2D.png used on input line 
-213.
+221.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/2D/ye_msd_2D.png, id=577, 730.6497pt x 550.6974pt>
+[36
+
+ <../images/2D/pipe_msd_2D.png>] [37 <../images/2D/pipe_beta_deff_2D.png>]
+<../images/2D/ye_msd_2D.png, id=607, 730.6497pt x 550.6974pt>
 File: ../images/2D/ye_msd_2D.png Graphic file (type png)
 
 <use ../images/2D/ye_msd_2D.png>
-Package pdftex.def Info: ../images/2D/ye_msd_2D.png used on input line 223.
+Package pdftex.def Info: ../images/2D/ye_msd_2D.png used on input line 232.
 (pdftex.def)             Requested size: 433.62001pt x 326.83293pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../images/2D/ye_beta_deff_2D.png, id=578, 841.9455pt x 872.2989pt>
+<../images/2D/ye_beta_deff_2D.png, id=608, 841.9455pt x 872.2989pt>
 File: ../images/2D/ye_beta_deff_2D.png Graphic file (type png)
 
 <use ../images/2D/ye_beta_deff_2D.png>
 Package pdftex.def Info: ../images/2D/ye_beta_deff_2D.png used on input line 23
-0.
+9.
 (pdftex.def)             Requested size: 433.62001pt x 449.2456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [33
+) [38
 
- <../images/2D/pie_msd_2D.png>] (../chapters/conclusion.tex [34 <../images/2D/p
-ie_beta_deff_2D.png>] [35 <../images/2D/pipe_msd_2D.png>] [36 <../images/2D/pip
-e_beta_deff_2D.png>] [37 <../images/2D/ye_msd_2D.png>] [38 <../images/2D/ye_bet
-a_deff_2D.png>]
+ <../images/2D/ye_msd_2D.png>] (../chapters/conclusion.tex [39 <../images/2D/ye
+_beta_deff_2D.png>]
 Chapter 4.
 
 Overfull \hbox (3.47269pt too wide) in paragraph at lines 1--1
  \OT1/cmr/bx/n/20.74 4. FU-TURE WORK AND CON-CLU-SION
  []
 
-) [39
+) [40
 
-] [40]
+] [41]
 Appendix A.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
-[41
+[42
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
@@ -1179,13 +1177,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A3E1D7FF9EDE7C386A3F9801461AC3F4;1786.
+(rerunfilecheck)             Checksum: 0F34456378A96485CDC560B875119439;1790.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 17627 strings out of 493304
- 334176 string characters out of 6139871
- 404737 words of memory out of 5000000
+ 17628 strings out of 493304
+ 334187 string characters out of 6139871
+ 405301 words of memory out of 5000000
  20714 multiletter control sequences out of 15000+600000
  13463 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1205,10 +1203,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on main.pdf (46 pages, 1521110 bytes).
+Output written on main.pdf (47 pages, 1523894 bytes).
 PDF statistics:
- 708 PDF objects out of 1000 (max. 8388607)
- 480 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 714 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 116 named destinations out of 1000 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
