@@ -112,12 +112,12 @@
 	 
 	 In Figure \ref{fig:pie_beta_deff_1D}, the extent of the anomalous diffusion is clear in the $ \beta (t) $ versus $ t $ top figure. For all transition probabilities, steady diffusion occurs from the start of the simulation to some time where particles meet the semi-permeable boundary; this occurs at the same time for all simulations since C/EC diffusivity was constant. Both the magnitude of sub-diffusive behaviour and length of time before reaching steady diffusion, increase with decreasing transition probability. Super-diffusive behaviour appears only for two transition probabilities; it might be interesting to find the threshold transition probability that results in super-diffusive behaviour.
 	 
-	 In the bottom figure, the effective diffusivity approaches an average of the boundary transition probabilities, at least for transition probabilities much smaller than C/EC diffusivities. This is shown for $ P_{i \rightarrow e} = 0.150 $ and is observed for the other transition probabilities as well; however, this `average approach' sometimes under- or over-estimates the effective diffusivity obtained in the simulations and does not work well for transition probabilities approaching C/EC diffusivities, which may indicate dependence on regional diffusivities.
+	 In the bottom figure, the effective diffusivity may approach an average of the boundary transition probabilities, at least for transition probabilities much smaller than C/EC diffusivities. This is shown for $ P_{i \rightarrow e} = 0.150 $ and is observed for the other transition probabilities as well; however, this `average approach' sometimes under- or over-estimates the effective diffusivity obtained in the simulations and does not work well for transition probabilities approaching C/EC diffusivities, which may indicate dependence on regional diffusivities.
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_beta_deff_1D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. In lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the bottom dashed line (an average of the transition probabilities).}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities).}
 		\label{fig:pie_beta_deff_1D}
 	\end{figure}
 
@@ -129,7 +129,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_msd_1D}
-		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
+		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.005 $ for the dashed line.}
 		\label{fig:pipe_msd_1D}
 	\end{figure}
 	
@@ -140,7 +140,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_beta_deff_1D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.005 $ for the dashed line.}
 		\label{fig:pipe_beta_deff_1D}
 	\end{figure}
 
@@ -185,12 +185,12 @@
 \subsection{Boundary Transition Probabilities}
 \label{sec:2D-boundary-transition-probabilities}
 
-	For all transition probabilities tested (``pie" in figures), anomalous diffusion behaviour is present. Inspection of the MSD versus time plots in Figure \ref{fig:pie_msd_2D}, shows initial sub-diffusive behaviour caused by particles meeting semi-permeable boundary of the starting region, followed by super-diffusive behaviour as particles exit their initial enclosure and reach the high-diffusivity extracellular region.  Note that a single MC simulation was run with the same parameters as the corresponding ME simulation. The two are in good agreement but $ D_\textrm{eff} $ calculated from the MC simulation is slightly smaller than calculated from the ME simulation, beyond a time where most particles have left the starting region.
+	For all transition probabilities tested (``pie" in figures), anomalous diffusion behaviour is present. Inspection of the MSD versus time plots in Figure \ref{fig:pie_msd_2D}, shows initial sub-diffusive behaviour caused by particles meeting semi-permeable boundary of the starting region, followed by super-diffusive behaviour as particles exit their initial enclosure and reach the high-diffusivity extracellular region.  Note that a single MC simulation was run with the same parameters as the corresponding ME simulation. The two are in good agreement but $ D_\textrm{eff} $ calculated from the MC simulation is slightly smaller than calculated from the ME simulation, beyond a time where most particles have left the starting region. This discrepancy may by due to the finite number of particles used and the statistical error introduced by low particle densities.
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps.}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. $ D = 0.05 $ for the dashed line.}
 		\label{fig:pie_msd_2D}
 	\end{figure}
 	
@@ -201,7 +201,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps.}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.15 $ for the top dashed line and $ D = 0.05 $ for the middle dashed line, and $ D = 0.005 $ for the bottom dashed line.}
 		\label{fig:pie_beta_deff_2D}
 	\end{figure}
 
@@ -214,7 +214,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
 		\label{fig:pipe_msd_2D}
 	\end{figure}
 	
@@ -225,7 +225,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
 		\label{fig:pipe_beta_deff_2D}
 	\end{figure}
 	
@@ -238,16 +238,18 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:ye_msd_2D}
 	\end{figure}
 	
+	Similar to the 1D system with the same diffusivity and transition probability parameters, only sub-diffusive behaviour occurred in the 2D system with no extracellular channel (refer to Figure \ref{fig:pie_msd_1D} and \ref{fig:pie_beta_deff_1D}). Observe in Figure \ref{fig:ye_beta_deff_2D}, the addition of even a single (1) lattice site as an extracellular channel results in super-diffusive behaviour. It appears the change in diffusion behaviour becomes less dramatic with increasing channel width. Larger channel widths need to be tested to verify this and identify how $ \beta $ might depend on channel width.
 	
+	It is not certain how the long-time effective diffusivity depends on the channel width and other parameters. What can be said is that increasing the width of the channel makes more of the highly diffusive extracellular space available for the particles, therefore it is expected that larger channel widths result in greater long-time effective diffusivities (up to a certain limit: the extracellular diffusivity).
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities, similar to the 1D case).}
 		\label{fig:ye_beta_deff_2D}
 	\end{figure}
 
