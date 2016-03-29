@@ -129,15 +129,15 @@ Copyright \textcopyright \ \the\year \ \@author
 \addcontentsline{toc}{chapter}{\numberline{}Table of Contents}
 \tableofcontents
 
-\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
-\listoffigures
-
-\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
-\listoftables
+%\newpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+%\listoffigures
+%
+%\newpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+%\listoftables
 
 \clearpage
 }

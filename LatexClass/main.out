@@ -2,25 +2,26 @@
 \BOOKMARK [0][-]{section*.2}{Acknowledgements}{}% 2
 \BOOKMARK [0][-]{section*.3}{Author's Declaration}{}% 3
 \BOOKMARK [0][-]{section*.4}{Table of Contents}{}% 4
-\BOOKMARK [0][-]{section*.6}{List of Figures}{}% 5
-\BOOKMARK [0][-]{section*.8}{List of Tables}{}% 6
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
-\BOOKMARK [1][-]{section.1.1}{Diffusion Theory}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.2}{Monte Carlo Theory}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.3}{Master Equation Theory}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.4}{Simple Cells and Tissues}{chapter.1}% 11
-\BOOKMARK [2][-]{subsection.1.4.1}{Tissues}{section.1.4}% 12
-\BOOKMARK [0][-]{chapter.2}{Models and Simulations}{}% 13
-\BOOKMARK [1][-]{section.2.1}{Monte Carlo Simulations}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.1.1}{1D Homogenous and Heterogeneous Systems}{section.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.1.2}{2D Heterogeneous Systems}{section.2.1}% 16
-\BOOKMARK [1][-]{section.2.2}{Master Equation Simulations}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Results and Analysis}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Preparation for Analysis}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.2}{1D Systems}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.2.1}{Boundary Transition Probability}{section.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.2.2}{Cellular and Extracellular Diffusivities}{section.3.2}% 22
-\BOOKMARK [1][-]{section.3.3}{2D Systems}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Future Work and Conclusion}{}% 24
-\BOOKMARK [0][-]{section*.33}{References}{}% 25
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 26
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Diffusion Theory}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Monte Carlo Theory}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Master Equation Theory}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{Simple Cells and Tissues}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.4.1}{Tissues}{section.1.4}% 10
+\BOOKMARK [0][-]{chapter.2}{Models and Simulations}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Monte Carlo Simulations}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{1D Homogenous and Heterogeneous Systems}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{2D Heterogeneous Systems}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Master Equation Simulations}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Results and Analysis}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Preparation for Analysis}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{1D Systems}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Boundary Transition Probability}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Cellular and Extracellular Diffusivities}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{2D Systems}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Boundary Transition Probability}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Cellular and Extracellular Diffusivities}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.3}{Extracellular Channel Widths}{section.3.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Future Work and Conclusion}{}% 25
+\BOOKMARK [0][-]{section*.29}{References}{}% 26
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 27

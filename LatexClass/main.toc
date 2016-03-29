@@ -2,8 +2,6 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{iii}{section*.2}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Author's Declaration}{iv}{section*.3}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Table of Contents}{v}{section*.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Figures}{vii}{section*.6}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Tables}{ix}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Diffusion Theory}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Monte Carlo Theory}{1}{section.1.2}
@@ -21,6 +19,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probability}{24}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{27}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}2D Systems}{30}{section.3.3}
-\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{37}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{38}{section*.33}
-\contentsline {chapter}{\numberline {A}Appendix}{39}{appendix.A}
+\contentsline {subsection}{\numberline {3.3.1}Boundary Transition Probability}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Cellular and Extracellular Diffusivities}{33}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Extracellular Channel Widths}{33}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{39}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{40}{section*.29}
+\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}

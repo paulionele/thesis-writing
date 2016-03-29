@@ -95,7 +95,7 @@
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
 	
 	\newpage
-	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintain the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
+	Section \ref{sec:1D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintaining the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
 	
 \subsection{Boundary Transition Probability}
 \label{sec:1D-boundary-transition-probability}
@@ -124,7 +124,7 @@
 \clearpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:1D-cellular-extracellular-diffusivities}
-	For each plot, the ratio of cellular to extracellular diffusivities (indicated as pi/pe on the figures), while all other parameters were held constant. More specifically, the cellular diffusivity was varied while the extracellular diffusivity was constant.
+	For each plot, the ratio of cellular to extracellular diffusivities (indicated as ``pi/pe" on the figures), while all other parameters were held constant. More specifically, the cellular diffusivity was varied while the extracellular diffusivity was constant.
 	
 	\begin{figure}[h!]
 		\centering
@@ -147,35 +147,44 @@
 \clearpage
 \section{2D Systems}
 \label{sec:ra-2D}
-
+	The analysis of 2D systems proceeded in the same manner as for 1D systems, except with the addition of another variable for testing: extracellular channel width. Section \ref{sec:2D-boundary-transition-probability} explores the effects of changing the semi-permeable boundary transition probability while maintaining C/EC diffusivities and channel width, constant. The second section \ref{sec:2D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the C/EC diffusivities while maintaining the semi-permeable boundary transition probabilities and channel width, constant. The third and final section \ref{sec:2D-channel-width} explores the effects of changing the width of the extracellular channel in $ \hat{y} $ while maintaining the ratio of C/EC diffusivities and semi-permeable boundary transition probabilities, constant.
+	
+	The 2D system is divided into two halves, upper and lower. The upper halve consists of alternating cellular and extracellular regions of the same and square geometry; the dimensions of these regions were the same for every simulation. The lower halve consists of a single extracellular channel.
+	
+	Due to the computational time required to simulate using MC, all simulations used for analysis were ME simulations and because of the additional physical dimension, more particles are needed in the MC simulation to obtain smoother distributions with smaller fluctuations. Figure \ref{fig:heterogeneous_3U_2D} and \ref{fig:MC_heterogeneous_3U_2D} show `heat maps' of the 2D density distribution at the same time step, for comparison. Figure \ref{fig:heterogeneous_11U_2D} shows diffusion in a larger system where particles have not reached the absolute boundaries and Figure \ref{fig:error_in_diffusion} shows a barely visible non-physical density distribution, created by purposely violating the ``iso-thermal" semi-permeable boundary condition.
+	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/heterogeneous_3U_2D}
-		\caption{}
+		\caption{Master equation simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $. Semi-permeable boundaries are clearly visible.}
 		\label{fig:heterogeneous_3U_2D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/MC_heterogeneous_3U_2D}
-		\caption{}
+		\caption{Monte Carlo simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used. Semi-permeable boundaries are clearly visible.}
 		\label{fig:MC_heterogeneous_3U_2D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/heterogeneous_11U_2D}
-		\caption{}
+		\caption{Master equation simulation of diffusion in a larger 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 330 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
 		\label{fig:heterogeneous_11U_2D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/error_in_diffusion}
-		\caption{}
+		\caption{Master equation simulation of diffusion in 2D heterogeneous system. Non-physical density distribution simulated by violating the semi-permeable boundary condition. Note the slightly visible `boundary' edges separating the upper extracellular region from lower extracellular channel. Errors may be less perceivable than in the 1D simulations and will likely not be visible until many time steps have elapsed and the system is very small.}
 		\label{fig:error_in_diffusion}
 	\end{figure}
-	
+
+\clearpage
+\subsection{Boundary Transition Probability}
+\label{sec:2D-boundary-transition-probability}
+
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_msd_2D}
@@ -189,7 +198,9 @@
 		\caption{}
 		\label{fig:pie_beta_deff_2D}
 	\end{figure}
-	
+
+\subsection{Cellular and Extracellular Diffusivities}
+\label{sec:2D-cellular-extracellular-diffusivities}	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
@@ -204,6 +215,9 @@
 		\label{fig:pipe_beta_deff_2D}
 	\end{figure}
 	
+\subsection{Extracellular Channel Widths}
+\label{sec:2D-channel-width}
+	In this section	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_msd_2D}
