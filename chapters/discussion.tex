@@ -33,7 +33,7 @@
 		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
 	\end{equation}
 	
-	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining how the long-time effetcive diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry (2D).
+	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining how the long-time effective diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry (2D).
 	 
 	
 \section{1D Systems}
@@ -163,7 +163,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/MC_heterogeneous_3U_2D}
-		\caption{Monte Carlo simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used. Semi-permeable boundaries are clearly visible.}
+		\caption{Monte Carlo simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
 		\label{fig:MC_heterogeneous_3U_2D}
 	\end{figure}
 	
@@ -181,11 +181,11 @@
 		\label{fig:error_in_diffusion}
 	\end{figure}
 
-\clearpage
+\newpage
 \subsection{Boundary Transition Probabilities}
 \label{sec:2D-boundary-transition-probabilities}
 
-	For all transition probabilities tested, anomalous diffusion behaviour is present. Inspection of the MSD versus time plots in Figure \ref{fig:pie_msd_2D}, shows initial sub-diffusive behaviour caused by particles meeting semi-permeable boundary of the starting region, followed by super-diffusive behaviour as particles exit their initial enclosure and reach the high-diffusivity extracellular region.  Note that a single MC simulation was run with the same parameters as the corresponding ME simulation. The two are in good agreement but $ D_\textrm{eff} $ calculated from the MC simulation is slightly smaller than calculated from the ME simulation, beyond a time where most particles have left the starting region.
+	For all transition probabilities tested (``pie" in figures), anomalous diffusion behaviour is present. Inspection of the MSD versus time plots in Figure \ref{fig:pie_msd_2D}, shows initial sub-diffusive behaviour caused by particles meeting semi-permeable boundary of the starting region, followed by super-diffusive behaviour as particles exit their initial enclosure and reach the high-diffusivity extracellular region.  Note that a single MC simulation was run with the same parameters as the corresponding ME simulation. The two are in good agreement but $ D_\textrm{eff} $ calculated from the MC simulation is slightly smaller than calculated from the ME simulation, beyond a time where most particles have left the starting region.
 	
 	\begin{figure}[h!]
 		\centering
@@ -194,7 +194,7 @@
 		\label{fig:pie_msd_2D}
 	\end{figure}
 	
-	Referring to Figure \ref{fig:pie_beta_deff_2D}, similar to the 1D case, the magnitude of the deviation from steady diffusion decreases with increasing transition probability, except now there is also super-diffusive behaviour present due to the extracellular channel. Observe the diffusive behaviour in the case of $ P_{i \rightarrow e}  = 0.150 $, there is a temporary plateau where the magnitude of super-diffusive behaviour is constant for some interval of time. Interestingly, in the $ \beta $ versus $ \log(t) $ plot, the time difference between the maximum and minimum of each plot increases with decreasing transition probability. This says the time spent in anomalous diffusion by a system increases with decreasing transition probability.
+	In Figure \ref{fig:pie_beta_deff_2D}, similar to the 1D case, the magnitude of the deviation from steady diffusion decreases with increasing transition probability, except now there is also super-diffusive behaviour present due to the extracellular channel. Observe the diffusive behaviour in the case of $ P_{i \rightarrow e}  = 0.150 $, there is a temporary plateau where the magnitude of super-diffusive behaviour is constant for some interval of time. Interestingly, in the $ \beta $ versus $ \log(t) $ plot, the time difference between the maximum and minimum of each plot increases with decreasing transition probability. Essentially, the time spent in anomalous diffusion by a system increases with decreasing transition probability.
 	
 	The effective diffusivity in the long-time is non-trivial and its dependence on the boundary transition probabilities, C/EC diffusivity ratios, and channel geometry is not obvious.
 	
@@ -208,36 +208,46 @@
 \clearpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:2D-cellular-extracellular-diffusivities}	
-	TBD.
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
-		\caption{}
-		\label{fig:pipe_msd_2D}
-	\end{figure}
+	
+	For all ratios of C/EC diffusivity tested (``pi/pe" in figures), it appears that regardless of the diffusivity of the starting region, the long-time effective diffusion coefficients are nearly the same.
 	
 	\begin{figure}[h]
 		\centering
+		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
+		\label{fig:pipe_msd_2D}
+	\end{figure}
+	
+	Compared to the 1D simulations where only sub-diffusive behaviour was observed, sub- and super-diffusive behaviour is observed for all C/EC ratios tested, in the 2D simulations. The displacement in the minimum of each plot in Figure \ref{fig:pipe_beta_deff_2D} is characteristic of different diffusivities in the particle's starting region.
+	
+	The long-time effective diffusion coefficients appear to converge to the same value, but it is unclear how this value depends on the parameters tested and it is unknown how changing other parameters might affect this long-time value. It might be interesting to test how the long-time effective diffusion coefficient depends on specific values of $ D_i $ and $ D_e $, while maintaining the ratio of these values constant.
+	
+	\begin{figure}[h!]
+		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_beta_deff_2D}
-		\caption{}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:pipe_beta_deff_2D}
 	\end{figure}
 	
 \clearpage
 \subsection{Extracellular Channel Widths}
 \label{sec:2D-channel-width}
-	TBD.
+	
+	The extracellular channel may be used as a `conduit' for particles and it is possible that once leaving the initial enclosure, a particle may not interact with a semi-permeable boundary. Therefore, how the dimensions of this channel affect diffusive behaviour and the long-time effective diffusion coefficient are of interest. The standard channel width for all other simulations was 15 lattice units. A channel width of 0 lattice units was also tested in order to simulate a pseudo-1D system. 
+	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_msd_2D}
-		\caption{}
+		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps}
 		\label{fig:ye_msd_2D}
 	\end{figure}
+	
+	
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_beta_deff_2D}
-		\caption{}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:ye_beta_deff_2D}
 	\end{figure}
 

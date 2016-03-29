@@ -19,9 +19,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probabilities}{24}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{27}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}2D Systems}{30}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Boundary Transition Probabilities}{33}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Cellular and Extracellular Diffusivities}{36}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Extracellular Channel Widths}{38}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{40}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{41}{section*.29}
-\contentsline {chapter}{\numberline {A}Appendix}{42}{appendix.A}
+\contentsline {subsection}{\numberline {3.3.1}Boundary Transition Probabilities}{32}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Cellular and Extracellular Diffusivities}{35}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Extracellular Channel Widths}{37}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{39}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{40}{section*.29}
+\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}
