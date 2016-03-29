@@ -19,8 +19,8 @@
 \contentsline {section}{\numberline {3.1}Preparation for Analysis}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}1D Systems}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probability}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{26}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}2D Systems}{27}{section.3.3}
-\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{36}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{37}{section*.33}
-\contentsline {chapter}{\numberline {A}Appendix}{38}{appendix.A}
+\contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{27}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}2D Systems}{30}{section.3.3}
+\contentsline {chapter}{\numberline {4}Future Work and Conclusion}{37}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{38}{section*.33}
+\contentsline {chapter}{\numberline {A}Appendix}{39}{appendix.A}

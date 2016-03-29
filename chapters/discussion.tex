@@ -117,30 +117,34 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_beta_deff_1D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. In lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the bottom dashed line (an average of the transition probabilities).}
 		\label{fig:pie_beta_deff_1D}
 	\end{figure}
 
-\newpage
+\clearpage
 \subsection{Cellular and Extracellular Diffusivities}
 \label{sec:1D-cellular-extracellular-diffusivities}
 	For each plot, the ratio of cellular to extracellular diffusivities (indicated as pi/pe on the figures), while all other parameters were held constant. More specifically, the cellular diffusivity was varied while the extracellular diffusivity was constant.
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_msd_1D}
-		\caption{}
+		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. }
 		\label{fig:pipe_msd_1D}
 	\end{figure}
 	
-	\begin{figure}[h]
+	In Figure \ref{fig:pipe_msd_1D}, anomalous diffusion is observed for all diffusivity ratios and in particular, no super-diffusive behaviour occurs. This last point is clearly evident in Figure \ref{fig:pipe_beta_deff_1D}; none of the ratios tested result in $ \beta > 1 $ for any time. The displacement of the peak of the curves in time is due to the varying cellular diffusivities tested. The larger the diffusivity of the region in which the particles start, the quicker the particles reach the semi-permeable boundary and sub-diffusive behaviour occurs. Interestingly, the magnitude in the deviation from steady diffusion is approximately the same for all C/EC diffusivity ratios. 
+	
+	The effective diffusion in the long-time is non-trivial; it does not seem to approach some derivable value. It likely depends on the C/EC diffusivities and transition probabilities but the relationship is not obvious. All that can be said for now is qualitative; for every C/EC diffusivity ratio tested, the effective diffusivity in the long time is less than the starting region diffusivity and the larger the starting diffusivity, the greater the difference from the long-time effective diffusivity. For ratios close to unity and transition probabilities very small, the effective diffusion coefficient may approach the average of the transition probabilities but this cannot be said with certainty. Further testing is needed.
+	
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_beta_deff_1D}
-		\caption{}
+		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps.}
 		\label{fig:pipe_beta_deff_1D}
 	\end{figure}
 
-\newpage
+\clearpage
 \section{2D Systems}
 \label{sec:ra-2D}
 
