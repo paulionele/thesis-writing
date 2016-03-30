@@ -8,14 +8,69 @@
 %We also performed an analysis: MSD, mean position, etc.?? Analysis is kind of empty!
 %
 %Overall overview to thesis? What kind of an overview? Or just a general background to some main concepts needed or used in this thesis? How does this compare with the abstract?
+
+We begin with an overview of basic theory on: diffusion, Monte Carlo methods, and master equation methods.
 	
 \section{Diffusion Theory}
 \label{sec:intro-diffusion}
-	Introduction.
-	Theory.
-	Supporting Figures.
+	Diffusion is a natural phenomenon caused by the tendency of small particles to spread out, or diffuse, in a given space. In a solution and at the microscopic level, the motion of particles is driven by thermal effects and particles collide in a practically random manner. If one was to track an individual particle, they would find its path to be chaotic---a `random walk'. As we will see, the random motion of individual particles can be modelled as a Monte Carlo random walk and the overall motion of many particles can be treated using a probabilistic approach using master equations.
+	
+	*insert random walk figure here*
+	
+	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur because particle flux across the boundary is equal in opposite directions.
+	
+	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later.
+	
+	In order to perform an analysis of diffusion behaviour in the simple cell models, a measure for the extent of particle motion was necessary. In the case of undirected motion, the time-average particle position $ \langle x \rangle $ is not a very useful quantity. Although the particle moves randomly, the expectation value for the position is equal to its starting position $ x_0 $. The time-average position-squared $ \langle \Delta x^2 \rangle $, also known as the mean-squared-displacement (MSD), is not equal to $ x_0 $. The MSD may be computed if individual particle positions are known or if the particle density distribution is known at some time $ t_n $. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD is:
+		
+	\begin{equation}
+		\langle \Delta x^2 \rangle = \langle x_{i}^2 \rangle + \langle x_i \rangle^2
+	\end{equation}
+	
+	The MSD calculated at each time step can be used to derive other quantities of interest such as the effective diffusivity constant $ D_\textrm{eff} $ at any point in time. Albert Einstein related the macroscopic diffusivity constant to the microscopic random walk via the MSD \citep{diffusion-1}.
+	
+	\begin{equation}
+	\label{eq:einstein-diffusion-steady}
+		\langle \Delta x^2 \rangle = 2Dt \cdot d
+	\end{equation}
+		
+	Where $ D $ is the diffusion coefficient and $ d $ is the dimensionality of the system ($ d = 1 $ was used for all calculations since we were interested only in the MSD in one direction). Solving for the effective diffusivity:
+	
+	\begin{equation}
+		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
+	\end{equation}	
+	
+	Einstein's diffusion equation as we may call it, says that the MSD scales linearly in time. While this is true for \textsl{steady diffusion}, this is not always true for systems where \textsl{anomalous diffusion} occurs. For a system undergoing a steady diffusion process, the log-log plot of MSD versus time has a slope of unity, since $ t $ is raised to the power of 1 in Equation \ref{eq:einstein-diffusion-steady}. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. 
+	
+	*insert anomalous diffusion figure*
+	
+	
+	We introduce a modified Einstein's diffusion equation with an additional exponential factor $ \beta $, to calculate a quantity $ \beta (t) $ that is useful for characterizing the kind and magnitude of the anomalous diffusion process at any time.
+	
+	\begin{equation}
+	\label{eq:einstein-modified}
+		\langle \Delta x^2 \rangle = 2D \cdot t^{\beta}
+	\end{equation}
+	
+	Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified}:
 
-%Refer to page 91 in \citep{ap}. Figure 4.1 may also be used? Or is it too `simple'?
+	\begin{equation}
+		\log\left( \langle \Delta x^2 \rangle \right) = \beta \cdot \log(t) + \log(2D)
+	\end{equation}	
+	
+	On a linear plot, this appears as a relation of the form $ Y = \beta X + C $ and if $ \beta = 1 $, then the diffusion process is steady. It is possible to determine what $ \beta $ is as a function of time. If we take the derivative $ dY/dX $, then:
+	
+	\begin{equation}
+		\dfrac{dY}{dX} = \beta (t)
+	\end{equation}
+	
+	A plot of $ \beta (t) $ versus $ t $ reveals the magnitude of the non-linearity and identifies if the diffusion process occurring sub- or super-diffusive at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
+	
+	\begin{equation}
+		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
+	\end{equation}
+	
+	Plots of $ D_\textrm{eff} $ and $ \beta $ versus $ \log (t) $ may be constructed and are useful in determining how the long-time effective diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry.
 
 \section{Monte Carlo Theory}
 \label{sec:intro-mc}
@@ -31,9 +86,7 @@
 
 \section{Master Equation Theory}
 \label{sec:intro-me}
-Introduction.
-Theory.
-Supporting figures.
+	With an enormous number of particles, all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration.
 
 \section{Simple Cells and Tissues}
 \label{sec:intro-cells}

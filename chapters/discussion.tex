@@ -3,39 +3,6 @@
 	
 	In this chapter, we begin an analysis of 1D heterogeneous systems, then move our attention to 2D heterogeneous systems. Although 1D homogeneous systems were simulated, they did not provide any interesting or new insight into diffusive behaviour, therefore those simulations and analytical data are not presented in detail. We begin each section with selected images of simulated density distributions to motivate further analysis. More specifically, we analyze how changing the boundary transition probabilities, region diffusivities, and cell geometry (2D only), affects the mean-squared-displacement (MSD) and show that sub- and super-diffusive regimes exist. Lastly, we show that the long-time effective diffusivity is non-trivial even for simple-cell geometries.
 	
-\section{Preparation for Analysis}
-	Since the same tools will be used to analyze similar plots for the 1D and 2D systems, this section serves to outline fundamentals that will be referred to and utilized frequently in the analysis.
-	
-	The analytical data computed from the density distribution at every time step included the MSD: $ \langle \Delta x^2 \rangle = \langle x^2 \rangle - \langle x \rangle^2 $. Einstein's diffusion equation says that for steady/regular diffusion in one dimension, the following relationship is valid: $ \langle \Delta x^2 \rangle = 2D \cdot t $. Essentially, in the case of steady diffusion, it is expected that the MSD increases linearly with time and furthermore, the log-log plot of such a relation has a slope of unity, since $ t $ is raised to the power of 1. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. We introduce a modified Einstein's diffusion equation with an additional exponential factor $ \beta $.
-	
-	\begin{equation}
-	\label{eq:einstein-modified}
-		\langle \Delta x^2 \rangle = 2D \cdot t^{\beta}
-	\end{equation}
-	
-	This factor $ \beta $ can be used to determine and quantify the diffusion regime of the system at some time $ t $. Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified}:
-
-	\begin{equation}
-		\log\left( \langle \Delta x^2 \rangle \right) = \beta \cdot \log(t) + \log(2D)
-	\end{equation}	
-	
-	On a linear plot, this appears as a relation of the form $ Y = \beta X + C $ and if $ \beta = 1 $, then the diffusion process is steady. It is possible to determine what $ \beta $ is as a function of time. If we take the derivative $ dY/dX $, then:
-	
-	\begin{equation}
-		\dfrac{dY}{dX} = \beta (t)
-	\end{equation}
-	
-	A plot of $ \beta (t) $ versus $ t $ reveals the magnitude of the non-linearity and identifies if the diffusion process occurring sub- or super-diffusive at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
-	
-	Another analytical quantity of interest was the effective diffusion coefficient $ D_\textrm{eff} $. The effective diffusion at any point in time may be calculated from Einstein's diffusion equation.
-	
-	\begin{equation}
-		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
-	\end{equation}
-	
-	Plots of $ D_\textrm{eff} $ versus $ t $ may be constructed and are useful in determining how the long-time effective diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry (2D).
-	 
-	
 \section{1D Systems}
 \label{sec:ra-1D}
 	For very large systems or short simulation times---conditions where the density distribution is zero at the absolute boundaries---agreement between the Monte Carlo (MC) and master equation (ME) simulation solutions, and analytical solutions (\ref{eq:1D-diffusion-equation-solution}) of the 1D diffusion equation with no net drift and constant diffusion factor (\ref{eq:1D-diffusion-equation}), was observed (Figure \ref{fig:11U_homogeneous_plots_1D}). 
@@ -94,7 +61,6 @@
 	\newpage
 	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. 
 	
-	\newpage
 	Section \ref{sec:1D-boundary-transition-probabilities} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintaining the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
 	
 \subsection{Boundary Transition Probabilities}
