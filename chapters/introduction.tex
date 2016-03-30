@@ -86,7 +86,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\rho_{j} \cdot P(A \rightarrow B) = \rho_{j+1} \cdot P(B \rightarrow A)
 	\end{equation}
 	
-	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{i \: \textrm{or} \: e} $ and the probability that the particle is successful in transitioning that boundary $ P_{i \rightarrow e \: \textrm{or} \: e \rightarrow i} $ (since the two events are considered mutually exclusive). Therefore, in our simulations:
+	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{i \: \textrm{or} \: e} $ and the probability that the particle is successful in transitioning that boundary $ P_{i \rightarrow e \: \textrm{or} \: e \rightarrow i} $ (since the two events are considered mutually exclusive) \citep{haan}. Therefore, in our simulations:
 	
 	\begin{equation}
 		\rho_{j} \cdot P_{i} \cdot P_{i \rightarrow e} = \rho_{j+1} \cdot P_{e} \cdot P_{e \rightarrow i}
