@@ -19,7 +19,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur because particle flux across the boundary is equal in opposite directions.
 	
-	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later.
+	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later in ``Detailed Balance".
 	
 	In order to perform an analysis of diffusion behaviour in the simple cell models, a measure for the extent of particle motion was necessary. In the case of undirected motion, the time-average particle position $ \langle x \rangle $ is not a very useful quantity. Although the particle moves randomly, the expectation value for the position is equal to its starting position $ x_0 $. The time-average position-squared $ \langle \Delta x^2 \rangle $, also known as the mean-squared-displacement (MSD), is not equal to $ x_0 $. The MSD may be computed if individual particle positions are known or if the particle density distribution is known at some time $ t_n $. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD is:
 		
@@ -71,6 +71,33 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\end{equation}
 	
 	Plots of $ D_\textrm{eff} $ and $ \beta $ versus $ \log (t) $ may be constructed and are useful in determining how the long-time effective diffusivity depends on the semi-permeable boundary transition probability, ratio of cellular to extracellular diffusivities, and system geometry.
+	
+\subsubsection{Detailed Balance}
+
+	A expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions of different diffusivities are separated by a semi-permeable boundary. On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
+	
+	*insert figure*  
+	
+%	An argument can be made that, in the higher diffusivity region, particles interact with this boundary more frequently than in the lower diffusivity region.
+	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine was the equilibrium condition is for the particle
+	
+	For our simulations, the following equilibrium condition was necessary:
+	
+	\begin{equation}
+		\rho_{j} \cdot P_{i} \cdot P_{i \rightarrow e} = \rho_{j+1} \cdot P_{e} \cdot P_{e \rightarrow i}
+	\end{equation}
+	
+	In the long time, if the condition that particle density is at uniform equilibrium, then  $\rho_{j} = \rho_{j+1} $. Therefore:
+	
+	\begin{equation}
+		P_{i} \cdot P_{i \rightarrow e} = P_{e} \cdot P_{e \rightarrow i}
+	\end{equation}
+	
+	This relation shows what we refer to as coupled boundary conditions. Setting the transition probability $ P_{i \rightarrow e} $ to some value automatically specifies the $ P_{e \rightarrow i} $.
+
+\subsubsection{Time and Length Scales}
+
+	From the Einstein diffusion equation, it is possible to map between simulation time and length and physical time and length. This was not done since there was no time left to work on this.
 
 \section{Monte Carlo Theory}
 \label{sec:intro-mc}
