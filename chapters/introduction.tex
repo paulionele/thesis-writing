@@ -15,7 +15,12 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 \label{sec:intro-diffusion}
 	Diffusion is a natural phenomenon caused by the tendency of small particles to spread out, or diffuse, in a given space. In a solution and at the microscopic level, the motion of particles is driven by thermal effects and particles collide in a practically random manner. If one was to track an individual particle, they would find its path to be chaotic---a `random walk'. As we will see, the random motion of individual particles can be modelled as a Monte Carlo random walk and the overall motion of many particles can be treated using a probabilistic approach using master equations.
 	
-	*insert random walk figure here*
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{../images/random-walk}
+		\caption{}
+		\label{fig:random-walk}
+	\end{figure}
 	
 	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur because particle flux across the boundary is equal in opposite directions.
 	
@@ -41,9 +46,14 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\end{equation}	
 	
 	Einstein's diffusion equation as we may call it, says that the MSD scales linearly in time. While this is true for \textsl{steady diffusion}, this is not always true for systems where \textsl{anomalous diffusion} occurs. For a system undergoing a steady diffusion process, the log-log plot of MSD versus time has a slope of unity, since $ t $ is raised to the power of 1 in Equation \ref{eq:einstein-diffusion-steady}. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. 
-	
-	*insert anomalous diffusion figure*
-	
+		
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{../images/diffusion-regime}
+		\caption{}
+		\label{fig:diffusion-regime}
+	\end{figure}
+
 	
 	We introduce a modified Einstein's diffusion equation with an additional exponential factor $ \beta $, to calculate a quantity $ \beta (t) $ that is useful for characterizing the kind and magnitude of the anomalous diffusion process at any time.
 	
@@ -76,7 +86,13 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 
 	A expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions $ A $ and $ B $ of different diffusivities are separated by a semi-permeable boundary. On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
 	
-	*insert figure*  
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.27\linewidth]{../images/balance}
+		\caption{}
+		\label{fig:balance}
+	\end{figure}
+ 
 	
 %	An argument can be made that, in the higher diffusivity region, particles interact with this boundary more frequently than in the lower diffusivity region.
 
@@ -106,9 +122,15 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 
 \section{Monte Carlo Theory}
 \label{sec:intro-mc}
-	Introduction.
-	Theory.
-	Supporting figures.
+	TBD.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{../images/mc-random-walk}
+		\caption{}
+		\label{fig:mc-random-walk}
+	\end{figure}
+
 
 %The ``Monte Carlo method'' is a general probabilistic algorithm for estimating the probability of an event based on the a number of random trials.
 %Lattice Monte Carlo (LMC) is basically a type of discretization method.
@@ -119,6 +141,14 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 \section{Master Equation Theory}
 \label{sec:intro-me}
 	With an enormous number of particles, all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\linewidth]{../images/fd-distribution}
+		\caption{}
+		\label{fig:fd-distribution}
+	\end{figure}
+
 
 \section{Simple Cells and Tissues}
 \label{sec:intro-cells}
