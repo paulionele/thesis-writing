@@ -74,14 +74,19 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 \subsubsection{Detailed Balance}
 
-	A expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions of different diffusivities are separated by a semi-permeable boundary. On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
+	A expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions $ A $ and $ B $ of different diffusivities are separated by a semi-permeable boundary. On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
 	
 	*insert figure*  
 	
 %	An argument can be made that, in the higher diffusivity region, particles interact with this boundary more frequently than in the lower diffusivity region.
-	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine was the equilibrium condition is for the particle
+
+	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine was the equilibrium condition is for the particle densities.
 	
-	For our simulations, the following equilibrium condition was necessary:
+	\begin{equation}
+		\rho_{j} \cdot P(A \rightarrow B) = \rho_{j+1} \cdot P(B \rightarrow A)
+	\end{equation}
+	
+	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{i \: \textrm{or} \: e} $ and the probability that the particle is successful in transitioning that boundary $ P_{i \rightarrow e \: \textrm{or} \: e \rightarrow i} $ (since the two events are considered mutually exclusive). Therefore, in our simulations:
 	
 	\begin{equation}
 		\rho_{j} \cdot P_{i} \cdot P_{i \rightarrow e} = \rho_{j+1} \cdot P_{e} \cdot P_{e \rightarrow i}
