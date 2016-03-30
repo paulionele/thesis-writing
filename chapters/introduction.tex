@@ -18,7 +18,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{../images/random-walk}
-		\caption{}
+		\caption{Random walk of a particle with varying step sizes and directions. For an unbiased walk, the displacement from start is expected to be zero.}
 		\label{fig:random-walk}
 	\end{figure}
 	
@@ -50,7 +50,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{../images/diffusion-regime}
-		\caption{}
+		\caption{Three diffusion behaviours are observed in the simple cell models.}
 		\label{fig:diffusion-regime}
 	\end{figure}
 
@@ -84,7 +84,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 \subsubsection{Detailed Balance}
 
-	A expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions $ A $ and $ B $ of different diffusivities are separated by a semi-permeable boundary. On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
+	An expected result of all simulations was that the long time particle density distribution is equal across all space. In order for that to occur, special consideration was needed for the semi-permeable boundaries so that the simulations produced the correct results. Consider a very simple system; two regions $ A $ and $ B $ of different diffusivities are separated by a semi-permeable boundary (Figure \ref{fig:balance}). On the left of the boundary at some point $ j $ there is a particle density $ \rho_j $. On the right of the boundary at $ j+1 $ there is a particle density $ \rho_{j+1} $. 
 	
 	\begin{figure}[h]
 		\centering
@@ -96,7 +96,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 %	An argument can be made that, in the higher diffusivity region, particles interact with this boundary more frequently than in the lower diffusivity region.
 
-	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine was the equilibrium condition is for the particle densities.
+	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine what the equilibrium condition is for the particle densities.
 	
 	\begin{equation}
 		\rho_{j} \cdot P(A \rightarrow B) = \rho_{j+1} \cdot P(B \rightarrow A)
@@ -120,6 +120,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 
 	From the Einstein diffusion equation, it is possible to map between simulation time and length and physical time and length. This was not done since there was no time left to work on this.
 
+\clearpage
 \section{Monte Carlo Theory}
 \label{sec:intro-mc}
 	TBD.
@@ -127,7 +128,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{../images/mc-random-walk}
-		\caption{}
+		\caption{Monte Carlo random walk on a 2D lattice. In our simulations, the step-sizes were fixed length and only on directional step was allowed each time step.}
 		\label{fig:mc-random-walk}
 	\end{figure}
 
@@ -138,6 +139,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 %---Kinetic Monte Carlo: https://en.wikipedia.org/wiki/Kinetic_Monte_Carlo
 %---http://web5.uottawa.ca/www5/p2uo/website/res_lmc.shtml
 
+\clearpage
 \section{Master Equation Theory}
 \label{sec:intro-me}
 	With an enormous number of particles, all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration.
@@ -145,11 +147,11 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{../images/fd-distribution}
-		\caption{}
+		\caption{Distribution approach on a lattice for diffusion in 2D. Each density and probability product represents the `amount' of density. Not shown is the particle density that `stays' at $ (i,j) $, $ \rho_{(i,j) \cdot P_S} $ where $ P_S $ is the probability that particles stay at the current lattice site.}
 		\label{fig:fd-distribution}
 	\end{figure}
 
-
+\clearpage
 \section{Simple Cells and Tissues}
 \label{sec:intro-cells}
 	Nearly all human cells are microscopic in size; their diameters range from 7.5 \si{\micro\meter} to approximately 150 \si{\micro\meter} and a cell exhibits a particular size or shape that reflects the specific task it's designated to perform. There are many different types of cells including nerve cells, muscle cells, and gland cells, but despite their anatomical and functional differences, the cells of the human body have many similarities. It is a fact that no cell contains all cellular components found in all the cell types, so often a composite cell (Figure {\ref{fig:cellpic_2.png}}) is used to exhibit the most important characteristics. 
