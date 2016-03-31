@@ -96,7 +96,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 %	An argument can be made that, in the higher diffusivity region, particles interact with this boundary more frequently than in the lower diffusivity region.
 
-	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine what the equilibrium condition is for the particle densities.
+	Detailed balance theory is useful in understanding and creating boundary conditions to correctly model the dynamics of this two-state system. If the probability of a transition from some state $ A $ to state $ B $ is $ P(A \rightarrow B) $ and the reverse, $ P(B \rightarrow A) $, are known, then it is possible to determine what the equilibrium condition is for the particle densities. That condition is:
 	
 	\begin{equation}
 		\rho_{j} \cdot P(A \rightarrow B) = \rho_{j+1} \cdot P(B \rightarrow A)
@@ -114,7 +114,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		P_{i} \cdot P_{i \rightarrow e} = P_{e} \cdot P_{e \rightarrow i}
 	\end{equation}
 	
-	This relation shows what we refer to as coupled boundary conditions. Setting the transition probability $ P_{i \rightarrow e} $ to some value automatically specifies the $ P_{e \rightarrow i} $.
+	This relation shows what we refer to as coupled boundary conditions. Setting the transition probability $ P_{i \rightarrow e} $ to some value automatically specifies $ P_{e \rightarrow i} $.
 
 \subsubsection{Time and Length Scales}
 
@@ -123,7 +123,10 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 \clearpage
 \section{Monte Carlo Theory}
 \label{sec:intro-mc}
-	TBD.
+	
+	The term ``Monte Carlo" (MC) summarizes a large number of methods; with some methods simple and others more complex. However, all of the MC methods are based on the sampling of random numbers. In general, MC methods offer the advantage of computational strength, particularly in cases where it is simply not feasible to employ deterministic methods. For our purposes, the motivation to use MC was the nature of the diffusion process, at least at a microscopic level, and the fact that particle trajectories (position history) can be maintained for each particle. This method of simulating diffusion is a particle-based approach to diffusion.
+	
+	The MC method utilized in our simulations is a basic method and can be referred to as lattice-MC (LMC).  What follows is a overview of the process. At each time step, a pseudo-random number is drawn from a uniform distribution\footnote{Random number generation is a scientific field in itself. It is difficult to generate a purely random sequence of numbers and the distribution sampled was probably approximately uniform. These limitations were likely not of great importance in our simulations.}. This random number is then tested for membership within intervals defined by probabilities and based on the interval the random number is a member of, a specific action is taken.
 	
 	\begin{figure}[h]
 		\centering
@@ -132,12 +135,11 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\label{fig:mc-random-walk}
 	\end{figure}
 
-
-%The ``Monte Carlo method'' is a general probabilistic algorithm for estimating the probability of an event based on the a number of random trials.
-%Lattice Monte Carlo (LMC) is basically a type of discretization method.
-%Look into:
-%---Kinetic Monte Carlo: https://en.wikipedia.org/wiki/Kinetic_Monte_Carlo
-%---http://web5.uottawa.ca/www5/p2uo/website/res_lmc.shtml
+	This basic method is best described with an example. Consider a 1D system where the diffusivity is $ D = 0.2 $. The probability of a particle to step in a direction is $ P = 0.2 $ (this is true for our simulations and can be shown). We define a set of intervals: $ (0,0.2] $, $ (0.2,0.4] $, and $ (0.4,1.0] $, and with each interval assign an action. If the random number $ rnd \in (0,0.2] $, then the particle moves left. If $ rnd \in (0.2,0.4] $, then the particle moves right. If the number generated is not in those intervals, then for the next time step the particle stays at its current lattice site.
+	
+	`Moving' the particles is quite simple, if the region is simple and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
+	
+	
 
 \clearpage
 \section{Master Equation Theory}
