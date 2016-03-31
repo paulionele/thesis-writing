@@ -1,28 +1,26 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{ii}{section*.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{iii}{section*.2}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Author's Declaration}{iv}{section*.3}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Table of Contents}{v}{section*.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Author's Declaration}{iii}{section*.2}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Table of Contents}{iv}{section*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Diffusion Theory}{1}{section.1.1}
-\contentsline {subsubsection}{Detailed Balance}{5}{section*.8}
-\contentsline {subsubsection}{Time and Length Scales}{6}{section*.10}
-\contentsline {section}{\numberline {1.2}Monte Carlo Theory}{7}{section.1.2}
-\contentsline {section}{\numberline {1.3}Master Equation Theory}{8}{section.1.3}
-\contentsline {section}{\numberline {1.4}Simple Cells and Tissues}{10}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Tissues}{11}{subsection.1.4.1}
-\contentsline {chapter}{\numberline {2}Models and Simulations}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Monte Carlo Simulations}{14}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}1D Homogenous and Heterogeneous Systems}{15}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}2D Heterogeneous Systems}{19}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Master Equation Simulations}{21}{section.2.2}
-\contentsline {chapter}{\numberline {3}Results and Analysis}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}1D Systems}{25}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Boundary Transition Probabilities}{30}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Cellular and Extracellular Diffusivities}{34}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}2D Systems}{37}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probabilities}{39}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{42}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Extracellular Channel Widths}{44}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Conclusion}{47}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{48}{section*.36}
-\contentsline {chapter}{\numberline {A}Appendix}{49}{appendix.A}
+\contentsline {subsubsection}{Detailed Balance}{5}{section*.7}
+\contentsline {subsubsection}{Time and Length Scales}{7}{section*.9}
+\contentsline {section}{\numberline {1.2}Monte Carlo Theory}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Master Equation Theory}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Simple Cells and Tissues}{11}{section.1.4}
+\contentsline {subsubsection}{Tissues}{12}{section*.13}
+\contentsline {chapter}{\numberline {2}Models and Simulations}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Monte Carlo Simulations}{15}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}1D Homogenous and Heterogeneous Systems}{16}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}2D Heterogeneous Systems}{20}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Master Equation Simulations}{22}{section.2.2}
+\contentsline {chapter}{\numberline {3}Results and Analysis}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}1D Systems}{26}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Boundary Transition Probabilities}{31}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Cellular and Extracellular Diffusivities}{35}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}2D Systems}{38}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Boundary Transition Probabilities}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{43}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Extracellular Channel Widths}{45}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Conclusion}{48}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{49}{section*.36}

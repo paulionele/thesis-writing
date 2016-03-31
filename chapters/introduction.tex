@@ -1,15 +1,9 @@
 \chapter{Introduction}
 \label{chapter:introduction}
 
-	What was/is the purpose of this thesis? Why did we develop these computational simulations? Really, we need a goal!
-
-%In this thesis, a lattice Monte Carlo approach was used to simulate diffusion. Also used a finite difference method to simulate diffusion. Both problems were boundary-value problems.
-%
-%We also performed an analysis: MSD, mean position, etc.?? Analysis is kind of empty!
-%
-%Overall overview to thesis? What kind of an overview? Or just a general background to some main concepts needed or used in this thesis? How does this compare with the abstract?
-
-We begin with an overview of basic theory on: diffusion, Monte Carlo methods, and master equation methods.
+	Diffusion is a physical phenomenon that occurs in gases, liquids, and even solids. In the context of the human body, diffusion is absolutely necessary for many physiological processes to occur. From oxygen and carbon dioxide diffusion occurring between the alveolar air space and capillaries in the lungs, to facilitated diffusion occurring across the plasma membrane of an individual cell---diffusion is of scientific interest.
+	
+	In this thesis project, we created 1D and 2D simple cell and tissue models and simulated unbiased diffusion in these systems using Monte Carlo and master equation methods. The goals were to develop two computational methods that can be more easily implemented to simulate diffusion, compared to some analytical methods, and to gain insight into the various diffusive behaviours occurring in the system and the long-time effective diffusivity.
 	
 \section{Diffusion Theory}
 \label{sec:intro-diffusion}
@@ -22,6 +16,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\label{fig:random-walk}
 	\end{figure}
 	
+	\newpage
 	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur. This is because particle flux across the boundary is equal in opposite directions.
 	
 	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later in ``Detailed Balance".
@@ -62,7 +57,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\langle \Delta x^2 \rangle = 2D \cdot t^{\beta}
 	\end{equation}
 	
-	Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified}:
+	\noindent Taking the base-10 logarithm of both sides of Equation \ref{eq:einstein-modified}:
 
 	\begin{equation}
 		\log\left( \langle \Delta x^2 \rangle \right) = \beta \cdot \log(t) + \log(2D)
@@ -170,7 +165,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 	%Overall, most of the cytosol is water and the viscosity of the cytoplasm is approximately the same as pure water, although the diffusion of small molecules is approximately four times slower than in pure water, due mostly to collisions with the large numbers of macromolecules in the cytosol.
 
-\subsection{Tissues}
+\subsubsection{Tissues}
 	In a multicellular organism, there are several levels of biological organization. A cell is the lowest level of organization that is considered living; tissues are the next higher level of organization and are composed of cells similar in structure and function. This ensemble of cells resides in an extracellular matrix (ECM); a medium containing water, fibrous and adhesive proteins, glycoproteins, and other molecules. The ECM varies in composition between different tissues, but providing structural support and facilitating cell-to-cell communication are common functions of the ECM. In some cells, the cytoplasm is more viscous than the extracellular matrix \citep{cr-biology}. At the cellular level some tissues are relatively organized.
 	
 	In this project, a simple tissue model was constructed based on some basic defining characteristics of real cells and tissues. The simple tissue model consisted homogeneous spaces, specifically more viscous intracellular regions and less viscous extracellular regions separated by a passive semi-permeable boundary. All of the cells in a model were of the same dimensions and repeated in series.
