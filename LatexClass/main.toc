@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{Detailed Balance}{5}{section*.8}
 \contentsline {subsubsection}{Time and Length Scales}{6}{section*.10}
 \contentsline {section}{\numberline {1.2}Monte Carlo Theory}{7}{section.1.2}
-\contentsline {section}{\numberline {1.3}Master Equation Theory}{9}{section.1.3}
+\contentsline {section}{\numberline {1.3}Master Equation Theory}{8}{section.1.3}
 \contentsline {section}{\numberline {1.4}Simple Cells and Tissues}{10}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Tissues}{11}{subsection.1.4.1}
 \contentsline {chapter}{\numberline {2}Models and Simulations}{12}{chapter.2}

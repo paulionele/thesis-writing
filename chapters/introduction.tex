@@ -13,7 +13,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 \section{Diffusion Theory}
 \label{sec:intro-diffusion}
-	Diffusion is a natural phenomenon caused by the tendency of small particles to spread out, or diffuse, in a given space. In a solution and at the microscopic level, the motion of particles is driven by thermal effects and particles collide in a practically random manner. If one was to track an individual particle, they would find its path to be chaotic---a `random walk'. As we will see, the random motion of individual particles can be modelled as a Monte Carlo random walk and the overall motion of many particles can be treated using a probabilistic approach using master equations.
+	Diffusion is a natural phenomenon caused by the tendency of small particles to spread out, or diffuse, in a given space. In a solution and at the microscopic level, the motion of particles is driven by thermal effects and particles collide in a practically random manner. If one was to track an individual particle, they would find its path to be chaotic---a `random walk'. As we will see, the random motion of individual particles can be modelled as a Monte Carlo random walk and the overall motion of many particles can be treated using the probabilistic approach of master equations.
 	
 	\begin{figure}[h]
 		\centering
@@ -22,7 +22,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\label{fig:random-walk}
 	\end{figure}
 	
-	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur because particle flux across the boundary is equal in opposite directions.
+	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur. This is because particle flux across the boundary is equal in opposite directions.
 	
 	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later in ``Detailed Balance".
 	
@@ -39,7 +39,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\langle \Delta x^2 \rangle = 2Dt \cdot d
 	\end{equation}
 		
-	Where $ D $ is the diffusion coefficient and $ d $ is the dimensionality of the system ($ d = 1 $ was used for all calculations since we were interested only in the MSD in one direction). Solving for the effective diffusivity:
+	Where $ D $ is the diffusion coefficient and $ d $ is the dimensionality of the system ($ d = 1 $ was used for all calculations since we were interested only in the MSD in one direction) \footnote{There is a caveat though, a correction must be made in the calculation of the MSD in 2D systems; it was calculated as though particle motion occurred in only a single dimension. For some time steps, there was no motion in the dimension the MSD was calculated in because particle motion could only occur in a single dimension, each time step. This is something in the current thesis that requires further work.}. Solving for the effective diffusivity:
 	
 	\begin{equation}
 		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
@@ -74,7 +74,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\dfrac{dY}{dX} = \beta (t)
 	\end{equation}
 	
-	A plot of $ \beta (t) $ versus $ t $ reveals the magnitude of the non-linearity and identifies if the diffusion process occurring sub- or super-diffusive at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
+	A plot of $ \beta (t) $ versus $ t $ reveals the magnitude of the non-linearity and identifies if the diffusion process occurring is sub- or super-diffusive at a particular time. For a sub-diffusive process $ \beta < 1 $, for a super-diffusive process $ \beta > 1 $, and for steady diffusion $ \beta = 1 $.
 	
 	\begin{equation}
 		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
@@ -105,7 +105,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{i \: \textrm{or} \: e} $ and the probability that the particle is successful in transitioning that boundary $ P_{i \rightarrow e \: \textrm{or} \: e \rightarrow i} $ (since the two events are considered mutually exclusive) \citep{haan}. Therefore, in our simulations:
 	
 	\begin{equation}
-		\rho_{j} \cdot P_{i} \cdot P_{i \rightarrow e} = \rho_{j+1} \cdot P_{e} \cdot P_{e \rightarrow i}
+		\rho_{j} \cdot \left[ P_{i} \cdot P_{i \rightarrow e} \right] = \rho_{j+1} \cdot \left[  P_{e} \cdot P_{e \rightarrow i} \right] 
 	\end{equation}
 	
 	In the long time, if the condition that particle density is at uniform equilibrium, then  $\rho_{j} = \rho_{j+1} $. Therefore:
@@ -126,7 +126,7 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 	
 	The term ``Monte Carlo" (MC) summarizes a large number of methods; with some methods simple and others more complex. However, all of the MC methods are based on the sampling of random numbers. In general, MC methods offer the advantage of computational strength, particularly in cases where it is simply not feasible to employ deterministic methods. For our purposes, the motivation to use MC was the nature of the diffusion process, at least at a microscopic level, and the fact that particle trajectories (position history) can be maintained for each particle. This method of simulating diffusion is a particle-based approach to diffusion.
 	
-	The MC method utilized in our simulations is a basic method and can be referred to as lattice-MC (LMC).  What follows is a overview of the process. At each time step, a pseudo-random number is drawn from a uniform distribution\footnote{Random number generation is a scientific field in itself. It is difficult to generate a purely random sequence of numbers and the distribution sampled was probably approximately uniform. These limitations were likely not of great importance in our simulations.}. This random number is then tested for membership within intervals defined by probabilities and based on the interval the random number is a member of, a specific action is taken.
+	The MC method utilized in our simulations is a basic method and can be referred to as lattice-MC (LMC).  What follows is an overview of the process. At each time step, a pseudo-random number ($ rnd $) is drawn from a uniform distribution\footnote{Random number generation is a scientific field in itself. It is difficult to generate a purely random sequence of numbers and the distribution sampled was probably approximately uniform. These limitations were likely not of great importance in our simulations.}. This random number is then tested for membership within intervals defined by probabilities and based on the interval the random number is a member of, a specific action is executed.
 	
 	\begin{figure}[h]
 		\centering
@@ -135,13 +135,10 @@ We begin with an overview of basic theory on: diffusion, Monte Carlo methods, an
 		\label{fig:mc-random-walk}
 	\end{figure}
 
-	This basic method is best described with an example. Consider a 1D system where the diffusivity is $ D = 0.2 $. The probability of a particle to step in a direction is $ P = 0.2 $ (this is true for our simulations and can be shown). We define a set of intervals: $ (0,0.2] $, $ (0.2,0.4] $, and $ (0.4,1.0] $, and with each interval assign an action. If the random number $ rnd \in (0,0.2] $, then the particle moves left. If $ rnd \in (0.2,0.4] $, then the particle moves right. If the number generated is not in those intervals, then for the next time step the particle stays at its current lattice site.
+	This basic method is best described with an example. Consider a 1D system where the diffusivity is $ D = 0.2 $. The probability of a particle to step in a direction is $ P = 0.2 $ (this is true for our simulations and can be shown). We define a set of intervals: $ (0,0.2] $, $ (0.2,0.4] $, and $ (0.4,1.0] $, and with each interval assign an action. If $ rnd \in (0,0.2] $, then the particle moves left. If $ rnd \in (0.2,0.4] $, then the particle moves right. If the number generated is not in those intervals, then for the next time step the particle stays at its current lattice site.
 	
 	`Moving' the particles is quite simple, if the region is simple and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
 	
-	
-
-\clearpage
 \section{Master Equation Theory}
 \label{sec:intro-me}
 	With an enormous number of particles, all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration.
