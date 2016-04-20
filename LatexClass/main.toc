@@ -1,14 +1,15 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{ii}{section*.1}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Author's Declaration}{iii}{section*.2}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Table of Contents}{iv}{section*.3}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Figures}{v}{section*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Diffusion Theory}{1}{section.1.1}
-\contentsline {subsubsection}{Detailed Balance}{5}{section*.7}
-\contentsline {subsubsection}{Time and Length Scales}{7}{section*.9}
+\contentsline {subsubsection}{Detailed Balance}{5}{section*.9}
+\contentsline {subsubsection}{Time and Length Scales}{7}{section*.11}
 \contentsline {section}{\numberline {1.2}Monte Carlo Theory}{8}{section.1.2}
 \contentsline {section}{\numberline {1.3}Master Equation Theory}{9}{section.1.3}
 \contentsline {section}{\numberline {1.4}Simple Cells and Tissues}{11}{section.1.4}
-\contentsline {subsubsection}{Tissues}{12}{section*.13}
+\contentsline {subsubsection}{Tissues}{12}{section*.15}
 \contentsline {chapter}{\numberline {2}Models and Simulations}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Monte Carlo Simulations}{15}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}1D Homogenous and Heterogeneous Systems}{16}{subsection.2.1.1}
@@ -23,4 +24,4 @@
 \contentsline {subsection}{\numberline {3.2.2}Cellular and Extracellular Diffusivities}{43}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Extracellular Channel Widths}{45}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}Conclusion}{48}{chapter.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{49}{section*.36}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }References}{49}{section*.38}

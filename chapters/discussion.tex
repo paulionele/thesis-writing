@@ -10,7 +10,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/11U_homogeneous_plots_1D}
-		\caption{Simple 1D system with no internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Additionally, an exact solution to diffusion equation (Fokker-Planck) is plotted. Parameter specifications: 330 lattice sites, $ D = 0.1 $, $ N = 8\cdot10^5 $ particles in MC simulation, and density normalized.}
+		\caption[1D: MC, ME, and analytical solutions for a homogenous system]{Simple 1D system with no internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Additionally, an exact solution to diffusion equation (Fokker-Planck) is plotted. Parameter specifications: 330 lattice sites, $ D = 0.1 $, $ N = 8\cdot10^5 $ particles in MC simulation, and density normalized.}
 		\label{fig:11U_homogeneous_plots_1D}
 	\end{figure}
 	
@@ -35,7 +35,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/11U_heterogeneous_plots_1D}
-		\caption{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.05 $. $ N = 5 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
+		\caption[1D: MC and ME solutions for a heterogeneous system]{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.05 $. $ N = 5 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
 		\label{fig:11U_heterogeneous_plots_1D}
 	\end{figure}
 	
@@ -44,7 +44,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/3U_heterogeneous_plots_1D}
-		\caption{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 90 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 8 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
+		\caption[1D: MC and ME solutions for a smaller heterogeneous system]{1D heterogeneous system with internal semi-permeable boundaries. Simulation solutions plotted for ME and MC methods. Parameter specifications: 90 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $. $ N = 8 \cdot 10^5 $ particles in the MC simulation and density normalized. Vertical dashed lines show semi-permeable boundary positions.}
 		\label{fig:3U_heterogeneous_plots_1D}
 	\end{figure}
 	
@@ -54,12 +54,12 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/11U_heterogeneous_plots_1D_nonphysical}
-		\caption{1D heterogeneous system with internal semi-permeable boundaries. Non-physical density distribution simulated by violating the semi-permeable boundary condition (sometimes known as the isothermal boundary condition). Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $ and $ P_{e\rightarrow i} =  0.005 $. Correctly chosen, $ P_{e\rightarrow i} =  0.0025 $. Vertical dashed lines show semi-permeable boundary positions. }
+		\caption[1D: Non-physical (undesirable) solution for a heterogeneous system]{1D heterogeneous system with internal semi-permeable boundaries. Non-physical density distribution simulated by violating the semi-permeable boundary condition (sometimes known as the isothermal boundary condition). Parameter specifications: 330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.01 $ and $ P_{e\rightarrow i} =  0.005 $. Correctly chosen, $ P_{e\rightarrow i} =  0.0025 $. Vertical dashed lines show semi-permeable boundary positions. }
 		\label{fig:11U_heterogeneous_plots_1D_nonphysical}
 	\end{figure}
 	
 	\newpage
-	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. In fact, this unwanted result may be used as a model for active transport.
+	Figure \ref{fig:11U_heterogeneous_plots_1D_nonphysical} shows the necessity of having coupled transition probabilities for the semi-permeable boundaries. The distribution in the long-time limit does not approach a uniform distribution, as would be expected for any system with passive semi-permeable boundaries and reflecting absolute boundaries. In the long-time, the density grows in certain cells and shrinks in others, similar to what might be expected if the semi-permeable boundaries behaved in an active-selective manner. In fact, this unwanted result could possibly be used as a model for active transport.
 	
 	Section \ref{sec:1D-boundary-transition-probabilities} explores the effects of changing the semi-permeable boundary transition probability while maintaining region diffusivities constant. The second and last section \ref{sec:1D-cellular-extracellular-diffusivities} explores the effects of changing the ratio of the cellular and extracellular (C/EC) diffusivities while maintaining the semi-permeable boundary transition probability constant. In both sections and for all simulations, the size of the unit cell was constant, and C/EC regions were of the same dimensions.
 	
@@ -70,7 +70,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_msd_1D}
-		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.2 $ for top dashed line, $ D = 0.05 $ for middle dashed line, and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the bottom dashed line (an average of the transition probabilities).}
+		\caption[1D: MSD for varying boundary transition probabilities]{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.2 $ for top dashed line, $ D = 0.05 $ for middle dashed line, and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the bottom dashed line (an average of the transition probabilities).}
 		\label{fig:pie_msd_1D}
 	\end{figure}
 	
@@ -83,7 +83,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pie_beta_deff_1D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities).}
+		\caption[1D: $ \beta (t) $ and $ D_\textrm{eff} $ for varying boundary transition probabilities]{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities).}
 		\label{fig:pie_beta_deff_1D}
 	\end{figure}
 
@@ -95,7 +95,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_msd_1D}
-		\caption{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.005 $ for the dashed line.}
+		\caption[1D: MSD for varying diffusivities]{MSD versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. $ D = 0.005 $ for the dashed line.}
 		\label{fig:pipe_msd_1D}
 	\end{figure}
 	
@@ -106,7 +106,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/1D/pipe_beta_deff_1D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.005 $ for the dashed line.}
+		\caption[1D: $ \beta (t) $ and $ D_\textrm{eff} $ for varying diffusivities]{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 1D heterogeneous system. Parameter specifications: 3330 lattice sites, 15 lattice sites per cellular or extracellular region, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 7\cdot 10^5 $ time steps. In the lower figure, $ D = 0.005 $ for the dashed line.}
 		\label{fig:pipe_beta_deff_1D}
 	\end{figure}
 
@@ -122,28 +122,28 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/heterogeneous_3U_2D}
-		\caption{Master equation simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $. Semi-permeable boundaries are clearly visible.}
+		\caption[2D: Master equation solution for a heterogeneous system]{Master equation simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $. Semi-permeable boundaries are clearly visible.}
 		\label{fig:heterogeneous_3U_2D}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/MC_heterogeneous_3U_2D}
-		\caption{Monte Carlo simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
+		\caption[2D: Monte Carlo solution for a heterogeneous system]{Monte Carlo simulation of diffusion in a 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 30 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
 		\label{fig:MC_heterogeneous_3U_2D}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/heterogeneous_11U_2D}
-		\caption{Master equation simulation of diffusion in a larger 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 330 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
+		\caption[2D: Master equation solution for a heterogeneous system (extended)]{Master equation simulation of diffusion in a larger 2D heterogeneous system. Parameter specifications: 90 lattice sites in $ \hat{x} $ and 330 lattice sites in $ \hat{y} $, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and $ P_{i\rightarrow e} = 0.025 $, $ N = 5 \cdot 10^5 $ particles used.}
 		\label{fig:heterogeneous_11U_2D}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/error_in_diffusion}
-		\caption{Master equation simulation of diffusion in 2D heterogeneous system. Non-physical density distribution simulated by violating the semi-permeable boundary condition. Note the slightly visible `boundary' edges separating the upper extracellular region from lower extracellular channel. Errors may be less perceivable than in the 1D simulations and will likely not be visible until many time steps have elapsed and/or the system is very small.}
+		\caption[2D: Non-physical (undesirable) solution for a heterogeneous system]{Master equation simulation of diffusion in 2D heterogeneous system. Non-physical density distribution simulated by violating the semi-permeable boundary condition. Note the slightly visible `boundary' edges separating the upper extracellular region from lower extracellular channel. Errors may be less perceivable than in the 1D simulations and will likely not be visible until many time steps have elapsed and/or the system is very small.}
 		\label{fig:error_in_diffusion}
 	\end{figure}
 
@@ -156,7 +156,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. $ D = 0.05 $ for the dashed line.}
+		\caption[2D: MSD for varying boundary transition probabilities]{MSD versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. $ D = 0.05 $ for the dashed line.}
 		\label{fig:pie_msd_2D}
 	\end{figure}
 	
@@ -167,7 +167,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pie_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.15 $ for the top dashed line and $ D = 0.05 $ for the middle dashed line, and $ D = 0.005 $ for the bottom dashed line.}
+		\caption[2D: $ \beta (t) $ and $ D_\textrm{eff} $ for varying boundary transition probabilities]{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3630 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.15 $ for the top dashed line and $ D = 0.05 $ for the middle dashed line, and $ D = 0.005 $ for the bottom dashed line.}
 		\label{fig:pie_beta_deff_2D}
 	\end{figure}
 
@@ -180,7 +180,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
+		\caption[2D: MSD for varying diffusivities]{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
 		\label{fig:pipe_msd_2D}
 	\end{figure}
 	
@@ -191,7 +191,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/pipe_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
+		\caption[2D: $ \beta (t) $ and $ D_\textrm{eff} $ for varying diffusivities]{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, 15 lattice site channel width, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.1 $ for the upper dashed line and $ D = 0.005 $ for the lower dashed line.}
 		\label{fig:pipe_beta_deff_2D}
 	\end{figure}
 	
@@ -204,7 +204,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_msd_2D}
-		\caption{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
+		\caption[2D: MSD for varying extracellular channel widths]{MSD versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps.}
 		\label{fig:ye_msd_2D}
 	\end{figure}
 	
@@ -215,7 +215,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{../images/2D/ye_beta_deff_2D}
-		\caption{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities, similar to the 1D case).}
+		\caption[2D: $ \beta (t) $ and $ D_\textrm{eff} $ for varying extracellular channel widths]{$ \beta (t) $ versus log(time) and $ D_\textrm{eff} $ versus time for 2D heterogeneous system. Parameter specifications: 3030 lattice sites, ($ 15 \times 15 $) lattice sites per cellular or extracellular region, $ D_i = 0.05 $, $ D_e = 0.2 $, $ P_{i \rightarrow e} = 0.01 $, and simulation time is $ 10^6 $ time steps. In the lower figure, $ D = 0.05 $ for the upper dashed line and $ D = 0.5 \cdot (P_{i \rightarrow e} + P_{e \rightarrow i}) $ for the lower dashed line (an average of the transition probabilities, similar to the 1D case).}
 		\label{fig:ye_beta_deff_2D}
 	\end{figure}
 

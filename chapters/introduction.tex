@@ -3,7 +3,7 @@
 
 	Diffusion is a physical phenomenon that occurs in gases, liquids, and even solids. In the context of the human body, diffusion is absolutely necessary for many physiological processes to occur. From oxygen and carbon dioxide diffusion occurring between the alveolar air space and capillaries in the lungs, to facilitated diffusion occurring across the plasma membrane of an individual cell---diffusion is of scientific interest.
 	
-	In this thesis project, we created 1D and 2D simple cell and tissue models and simulated unbiased diffusion in these systems using Monte Carlo and master equation methods. The goals were to develop two computational methods that can be more easily implemented to simulate diffusion, compared to some analytical methods, and to gain insight into the various diffusive behaviours occurring in the system and the long-time effective diffusivity.
+	In this thesis project, we created 1D and 2D simple cell and tissue models and simulated unbiased diffusion in these systems using Monte Carlo (MC) and master equation (ME) methods. The goals were to develop two computational methods to simulate diffusion that can be easily implemented, compared to some analytical methods, and to gain insight into the various diffusive behaviours occurring in the system and calculate the long-time effective diffusivity for various cell parameters.
 	
 \section{Diffusion Theory}
 \label{sec:intro-diffusion}
@@ -12,7 +12,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{../images/random-walk}
-		\caption{Random walk of a particle with varying step sizes and directions. For an unbiased walk, the displacement from start is expected to be zero.}
+		\caption[Simple random walk]{Random walk of a particle with varying step sizes and directions. For an unbiased walk, the displacement from start is expected to be zero.}
 		\label{fig:random-walk}
 	\end{figure}
 	
@@ -45,7 +45,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{../images/diffusion-regime}
-		\caption{Three diffusion behaviours are observed in the simple cell models.}
+		\caption[Diffusion regimes observed]{Three diffusion behaviours are observed in the simple cell models.}
 		\label{fig:diffusion-regime}
 	\end{figure}
 
@@ -84,7 +84,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.27\linewidth]{../images/balance}
-		\caption{}
+		\caption[Detailed balance theory]{}
 		\label{fig:balance}
 	\end{figure}
  
@@ -126,7 +126,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{../images/mc-random-walk}
-		\caption{Monte Carlo random walk on a 2D lattice. In our simulations, the step-sizes were fixed length and only on directional step was allowed each time step.}
+		\caption[Monte Carlo random walk on a 2D lattice]{Monte Carlo random walk on a 2D lattice. In our simulations, the step-sizes were fixed length and only on directional step was allowed each time step.}
 		\label{fig:mc-random-walk}
 	\end{figure}
 
@@ -136,12 +136,17 @@
 	
 \section{Master Equation Theory}
 \label{sec:intro-me}
-	With an enormous number of particles, all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration.
+	
+	Master equations are differential equations that describe the time-evolution of a system; more specifically, the probability of a system to occupy one of the discrete set of states as a function of time \citep{master-equations}. Similar to MC methods, ME theory can be complicated, so we limit the following discussion to the basics (as were used in the project). 
+	
+	Essentially, the ME approach utilized evolved the particle density distribution in time. As an example and with reference to Figure \ref{fig:fd-distribution}, in the limit of very many particles, the number of particles moving from $ (i+1,j) $ to $ (i,j) $ is $ N_{i+1,j} \cdot P_B $ where $ N $ can be expressed as a density. This is one of the reasons why this method is referred to as the probabilistic approach. It can be said that in the limit of very many particles, the MC computed density distributions approach the ME computed distributions.
+
+	Similar to what might be expected in an enormous number of particles was used; all randomness disappears and it looks as though the particles move smoothly and deterministically from areas of high concentration to low concentration. Discontinuities in the distributions due to statistical fluctuations are no longer an issue; however, at the expense of information on individual particle state. Using the ME method, it is not possible to know individual particle position history which restricts the use of certain analyses, particularly those that require individual particle trajectories. However, ME simulations were much faster to compute, compared to MC simulations, since instead of performing computations for every particle, computations were performed for every lattice site---a much lesser amount of work for the computer.
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{../images/fd-distribution}
-		\caption{Distribution approach on a lattice for diffusion in 2D. Each density and probability product represents the `amount' of density. Not shown is the particle density that `stays' at $ (i,j) $, $ \rho_{(i,j) \cdot P_S} $ where $ P_S $ is the probability that particles stay at the current lattice site.}
+		\caption[Master equation: the density distribution approach]{Distribution approach on a lattice for diffusion in 2D. Each density and probability product represents the fraction of density. Not shown is the particle density that `stays' at $ (i,j) $, $ \rho_{(i,j)} \cdot P_S $ where $ P_S $ is the probability that particles stay at the current lattice site. The density at $ (i,j) $ at the next time step is the sum of the fractions of density from adjacent lattice sites and the current lattice site.}
 		\label{fig:fd-distribution}
 	\end{figure}
 
@@ -153,7 +158,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{cellpic_2.png}
-		\caption{Composite cell showing various important and common internal cell structures. Most of the volume within the cell is occupied by the cytosol fluid. Figure courtesy of Essential Cell Biology, Alberts, 3rd.}
+		\caption[Simple composite cells]{Composite cell showing various important and common internal cell structures. Most of the volume within the cell is occupied by the cytosol fluid. Figure courtesy of Essential Cell Biology, Alberts, 3rd.}
 		\label{fig:cellpic_2.png}
 	\end{figure}
 
