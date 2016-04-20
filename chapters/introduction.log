@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  20 APR 2016 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.19)  20 APR 2016 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,7 +1484,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.15 		\caption
-               [Simple random walk.]{Random walk of a particle with varying ...
+               [Simple random walk]{Random walk of a particle with varying s...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1506,7 +1506,6 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no k in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -3536,8 +3535,8 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 26--26
 
 Overfull \hbox (86.71127pt too wide) detected at line 28
 \OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 i \OT
-1/cmr/m/n/10 = \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 i \OT1/cm
-r/m/n/10 + \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 i[]
+1/cmr/m/n/10 = \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 i ^^@ h\O
+ML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 i[]
  []
 
 
@@ -5164,7 +5163,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.48 		\caption
-               [Diffusion regimes observed.]{Three diffusion behaviours are ...
+               [Diffusion regimes observed]{Three diffusion behaviours are o...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5194,7 +5193,6 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -7046,7 +7044,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.87 		\caption
-               [Detailed balance.]{}
+               [Detailed balance theory]{}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7066,7 +7064,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
 Missing character: There is no ] in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
@@ -9853,7 +9856,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.129 		\caption
-                [Monte Carlo random walk on a 2D lattice.]{Monte Carlo rando...
+                [Monte Carlo random walk on a 2D lattice]{Monte Carlo random...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9891,7 +9894,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -12385,7 +12387,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.149 		\caption
-                [Master equation (density distribution approach.)]{Distribut...
+                [Master equation: the density distribution approach]{Distrib...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12405,7 +12407,10 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no ( in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -12433,8 +12438,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no ) in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -13599,7 +13602,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.161 		\caption
-                {Composite cell showing various important and common interna...
+                [Simple composite cells]{Composite cell showing various impo...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -13645,8 +13648,9 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 158--164
  []
 
 
-Overfull \hbox (862.46394pt too wide) in paragraph at lines 158--164
-[]\OML/cmm/m/it/10 :png[][]$ 
+Overfull \hbox (964.08707pt too wide) in paragraph at lines 158--164
+[]\OML/cmm/m/it/10 :png\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Simplecompositecells\O
+T1/cmr/m/n/10 ][][]$ 
  []
 
 

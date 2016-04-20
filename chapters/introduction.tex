@@ -24,7 +24,7 @@
 	In order to perform an analysis of diffusion behaviour in the simple cell models, a measure for the extent of particle motion was necessary. In the case of undirected motion, the time-average particle position $ \langle x \rangle $ is not a very useful quantity. Although the particle moves randomly, the expectation value for the position is equal to its starting position $ x_0 $. The time-average position-squared $ \langle \Delta x^2 \rangle $, also known as the mean-squared-displacement (MSD), is not equal to $ x_0 $. The MSD may be computed if individual particle positions are known or if the particle density distribution is known at some time $ t_n $. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD is:
 		
 	\begin{equation}
-		\langle \Delta x^2 \rangle = \langle x_{i}^2 \rangle + \langle x_i \rangle^2
+		\langle \Delta x^2 \rangle = \langle x_{i}^2 \rangle - \langle x_i \rangle^2
 	\end{equation}
 	
 	The MSD calculated at each time step can be used to derive other quantities of interest such as the effective diffusivity constant $ D_\textrm{eff} $ at any point in time. Albert Einstein related the macroscopic diffusivity constant to the microscopic random walk via the MSD \citep{diffusion-1}.
@@ -132,12 +132,12 @@
 
 	This basic method is best described with an example. Consider a 1D system where the diffusivity is $ D = 0.2 $. The probability of a particle to step in a direction is $ P = 0.2 $ (this is true for our simulations and can be shown). We define a set of intervals: $ (0,0.2] $, $ (0.2,0.4] $, and $ (0.4,1.0] $, and with each interval assign an action. If $ rnd \in (0,0.2] $, then the particle moves left. If $ rnd \in (0.2,0.4] $, then the particle moves right. If the number generated is not in those intervals, then for the next time step the particle stays at its current lattice site.
 	
-	`Moving' the particles is quite simple, if the region is simple and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
+	`Moving' the particles is quite simple---if the region is simple and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
 	
 \section{Master Equation Theory}
 \label{sec:intro-me}
 	
-	Master equations are differential equations that describe the time-evolution of a system; more specifically, the probability of a system to occupy one of the discrete set of states as a function of time \citep{master-equations}. Similar to MC methods, ME theory can be complicated, so we limit the following discussion to the basics (as were used in the project). 
+	Master equations are differential equations that describe the time-evolution of a system; more specifically, the probability of a system to occupy one of the discrete set of states as a function of time \citep{master-equations}. Similar to MC methods, ME theory can be complicated, so we limit the following discussion to the basics, as were used in the project. 
 	
 	Essentially, the ME approach utilized evolved the particle density distribution in time. As an example and with reference to Figure \ref{fig:fd-distribution}, in the limit of very many particles, the number of particles moving from $ (i+1,j) $ to $ (i,j) $ is $ N_{i+1,j} \cdot P_B $ where $ N $ can be expressed as a density. This is one of the reasons why this method is referred to as the probabilistic approach. It can be said that in the limit of very many particles, the MC computed density distributions approach the ME computed distributions.
 
