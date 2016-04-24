@@ -11,17 +11,17 @@
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\linewidth]{../images/random-walk}
+		\includegraphics[width=0.4\linewidth]{../images/random-walk}
 		\caption[Simple random walk]{Random walk of a particle with varying step sizes and directions. For an unbiased walk, the displacement from start is expected to be zero.}
 		\label{fig:random-walk}
 	\end{figure}
 	
 	\newpage
-	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move.	Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur. This is because particle flux across the boundary is equal in opposite directions.
+	Observing the solution from a macroscopic level, it appears that these collisions result in the movement of particles from an area of high concentration to an area of low concentration. The process is observable until the system has reached a particle concentration equilibrium. This equilibrium is a dynamic state, not a static one; overall diffusion may have stopped, but particles continue to move. Even with the introduction of semi-permeable boundaries separating a high particle concentration region from a low concentration region, if the particle is able to permeate the boundary, an equilibrium can still occur. This is because particle flux across the boundary is equal in opposite directions.
 	
 	In the simple cell models developed and analyzed, the region in which particles may exist is heterogeneous since it is divided by semi-permeable boundaries and each boundary encloses a region of different diffusivity. The diffusion process still occurs, but particle motion is mediated by the absolute reflecting boundaries of the system and more importantly, by the semi-permeable boundaries. The semi-permeable boundaries behave in a passive transport manner and are considered to facilitate the process of simple diffusion. The boundary conditions necessary to simulate passive transport and required to reach an equal concentration equilibrium are explained later in ``Detailed Balance".
 	
-	In order to perform an analysis of diffusion behaviour in the simple cell models, a measure for the extent of particle motion was necessary. In the case of undirected motion, the time-average particle position $ \langle x \rangle $ is not a very useful quantity. Although the particle moves randomly, the expectation value for the position is equal to its starting position $ x_0 $. The time-average position-squared $ \langle \Delta x^2 \rangle $, also known as the mean-squared-displacement (MSD), is not equal to $ x_0 $. The MSD may be computed if individual particle positions are known or if the particle density distribution is known at some time $ t_n $. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD is:
+	In order to perform an analysis of diffusion behaviour in the simple cell models, a measure for the extent of particle motion was necessary. In the case of unbiased motion, the time-average particle position $ \langle x \rangle $ is not a very useful quantity. Although the particle moves randomly, the expectation value for the position is equal to its starting position $ x_0 $. The time-average position-squared $ \langle \Delta x^2 \rangle $, also known as the mean-squared-displacement (MSD), is not equal to $ x_0 $, and gives a better representation of the distance a particle travels. The MSD may be computed if individual particle positions are known or if the particle density distribution is known at some time $ t_n $. Let $ x_i $ be the position of the $ \textrm{i}^\textrm{th} $ particle at $ t_n $, the MSD is:
 		
 	\begin{equation}
 		\langle \Delta x^2 \rangle = \langle x_{i}^2 \rangle - \langle x_i \rangle^2
@@ -40,7 +40,8 @@
 		D_\textrm{eff} = \dfrac{\langle \Delta x^2 \rangle}{2t}
 	\end{equation}	
 	
-	Einstein's diffusion equation as we may call it, says that the MSD scales linearly in time. While this is true for \textsl{steady diffusion}, this is not always true for systems where \textsl{anomalous diffusion} occurs. For a system undergoing a steady diffusion process, the log-log plot of MSD versus time has a slope of unity, since $ t $ is raised to the power of 1 in Equation \ref{eq:einstein-diffusion-steady}. For most systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. 
+	\pagebreak
+	Einstein's diffusion equation as we may call it, says that the MSD scales linearly in time. While this is true for \textsl{steady diffusion}, this is not always true for systems where \textsl{anomalous diffusion} occurs. For a system undergoing a steady diffusion process, the log-log plot of MSD versus time has a slope of unity, since $ t $ is raised to the power of~1 in Equation \ref{eq:einstein-diffusion-steady}. For all but the homogenous systems studied, there was some non-linearity in time indicating the presence of anomalous diffusion. 
 		
 	\begin{figure}[h]
 		\centering
@@ -97,19 +98,19 @@
 		\rho_{j} \cdot P(A \rightarrow B) = \rho_{j+1} \cdot P(B \rightarrow A)
 	\end{equation}
 	
-	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{i \: \textrm{or} \: e} $ and the probability that the particle is successful in transitioning that boundary $ P_{i \rightarrow e \: \textrm{or} \: e \rightarrow i} $ (since the two events are considered mutually exclusive) \citep{haan}. Therefore, in our simulations:
+	For our simulations, the total transition probability of a particle to cross a boundary is the product of two independent probabilities; the probability to step towards that boundary $ P_{\textrm{i or e}} $ and the probability that the particle is successful in transitioning that boundary $ P_{\textrm{i} \rightarrow \textrm{e} \: \textrm{or} \: \textrm{e} \rightarrow \textrm{i}} $ (since the two events are considered mutually exclusive) \citep{haan}. Therefore, in our simulations:
 	
 	\begin{equation}
-		\rho_{j} \cdot \left[ P_{i} \cdot P_{i \rightarrow e} \right] = \rho_{j+1} \cdot \left[  P_{e} \cdot P_{e \rightarrow i} \right] 
+		\rho_{j} \cdot \left[ P_{\textrm{i}} \cdot P_{\textrm{i} \rightarrow \textrm{e}} \right] = \rho_{j+1} \cdot \left[  P_{\textrm{e}} \cdot P_{\textrm{e} \rightarrow \textrm{i}} \right] 
 	\end{equation}
 	
 	In the long time, if the condition that particle density is at uniform equilibrium, then  $\rho_{j} = \rho_{j+1} $. Therefore:
 	
 	\begin{equation}
-		P_{i} \cdot P_{i \rightarrow e} = P_{e} \cdot P_{e \rightarrow i}
+		P_{\textrm{i}} \cdot P_{\textrm{i} \rightarrow \textrm{e}} = P_{\textrm{e}} \cdot P_{\textrm{e} \rightarrow \textrm{i}}
 	\end{equation}
 	
-	This relation shows what we refer to as coupled boundary conditions. Setting the transition probability $ P_{i \rightarrow e} $ to some value automatically specifies $ P_{e \rightarrow i} $.
+	This relation shows what we refer to as coupled boundary conditions. Setting the transition probability $ P_{\textrm{i} \rightarrow \textrm{e}}$ to some value automatically specifies $ P_{\textrm{e} \rightarrow \textrm{i}} $.
 
 \subsubsection{Time and Length Scales}
 
@@ -132,7 +133,7 @@
 
 	This basic method is best described with an example. Consider a 1D system where the diffusivity is $ D = 0.2 $. The probability of a particle to step in a direction is $ P = 0.2 $ (this is true for our simulations and can be shown). We define a set of intervals: $ (0,0.2] $, $ (0.2,0.4] $, and $ (0.4,1.0] $, and with each interval assign an action. If $ rnd \in (0,0.2] $, then the particle moves left. If $ rnd \in (0.2,0.4] $, then the particle moves right. If the number generated is not in those intervals, then for the next time step the particle stays at its current lattice site.
 	
-	`Moving' the particles is quite simple---if the region is simple and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
+	`Moving' the particles is quite simple---if the region is simple (homogenous) and there are no boundaries. Attention must be paid to the position of the particle so that the correct probabilities of stepping in the various directions are applied.
 	
 \section{Master Equation Theory}
 \label{sec:intro-me}
@@ -146,7 +147,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{../images/fd-distribution}
-		\caption[Master equation: the density distribution approach]{Distribution approach on a lattice for diffusion in 2D. Each density and probability product represents the fraction of density. Not shown is the particle density that `stays' at $ (i,j) $, $ \rho_{(i,j)} \cdot P_S $ where $ P_S $ is the probability that particles stay at the current lattice site. The density at $ (i,j) $ at the next time step is the sum of the fractions of density from adjacent lattice sites and the current lattice site.}
+		\caption[Master equation: the density distribution approach]{Distribution approach on a lattice for diffusion in 2D. Each density and probability product represents the fraction of density. Not shown is the particle density that `stays' at $ (i,j) $: $ \rho_{(i,j)} \cdot P_S $ where $ P_S $ is the probability that particles stay at the current lattice site. The density at $ (i,j) $ at the next time step is the sum of the fractions of density from adjacent lattice sites and the current lattice site.}
 		\label{fig:fd-distribution}
 	\end{figure}
 
